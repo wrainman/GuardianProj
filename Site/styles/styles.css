@@ -1,0 +1,488 @@
+﻿@import url("../logo/css/sifr.css");
+@import url("../themed_images/theme.css");
+
+
+
+
+/* CONTENT BG *****************************************************************************************************************************/
+
+/* inner CSS 
+.boxm-inner								{background: url('../graphics/boxm_0.jpg'); min-height:20px;}
+.boxm-2									{background: url('../graphics/boxm_2.jpg') repeat-x left top; 			vertical-align:top;}
+.boxm-6									{background: url('../graphics/boxm_6.jpg') repeat-x left bottom;}
+.boxm-4									{background: url('../graphics/boxm_4.jpg') repeat-y right top;}
+.boxm-8									{background: url('../graphics/boxm_8.jpg') repeat-y left top;}
+.boxm-5									{background: url('../graphics/boxm_5.jpg') no-repeat right bottom;}
+.boxm-7									{background: url('../graphics/boxm_7.jpg') no-repeat left bottom;}
+.boxm-3									{background: url('../graphics/boxm_3.jpg') no-repeat right top; 			vertical-align:top;}
+.boxm-1									{background: url('../graphics/boxm_1.jpg') no-repeat left top;			vertical-align:top; padding:0px;}
+.boxm									{margin:0px;	padding:0px;}
+.boxm-content							{padding:0px 0px 0px 0px; margin:0px;}
+*/
+
+/* Top corners and border  
+.boxm_content							{position:relative;}
+.btm 									{height:0px; 	margin:0px 0px 0px 0px; 			background:url('../graphics/boxm.png') no-repeat 100% 0;}
+.btm div 								{height:0px; 	left:-0px; width:0px; 			background:url('../graphics/boxm.png') no-repeat 0 0;		position:relative; font-size:0;line-height:0;}
+
+
+.bbm 									{height:0px; 	margin:0px 0px 0px 0px; 			background:url('../graphics/boxm.png') no-repeat 100% 100%;}
+.bbm div 								{height:0px; 	left:-0px; width:0px; 			background:url('../graphics/boxm.png') no-repeat 0 100%; 		position:relative;   font-size:0; line-height:0;}
+
+.i1m 									{padding:0px 0px 0px 27px;							background:url('../graphics/boxm_l.png') repeat-y 0 0;}
+
+.i2m 									{padding:0px 27px 0px 0px;							background:url('../graphics/boxm_r.png') repeat-y 100% 0;}
+
+.i3m 									{display:block;}
+.i3m 									{padding:0px 0px 0px 0px;	margin:0px 0px 0px 0px;}
+
+.i3m 									{background:url('../graphics/boxm_0.jpg');}
+
+.i3m:after 								{content:"."; display:block; 	height:0px; 		visibility:hidden;}
+.i3m 									{display:inline-block;}
+.i3m 									{display:block;}
+*/
+
+/*.menu_bg								{background: url('../graphics/menu_bg.png'); float:left; *min-width:400px; padding:0px 0px 0px 20px;}*/
+/*.menu_bg_right							{background: url('../graphics/menu_right.png'); width:20px; height:56px; float:left;}*/
+/* boxm *****************************************************************************************************************************/
+
+/* BOX INFO COLUMNS ***************************************************************************************************************************/
+
+/* inner CSS 
+.boxi-inner								{background: url('../graphics/boxi_0.jpg'); min-height:20px;}
+.boxi-2									{background: url('../graphics/boxi_2.jpg') repeat-x left top; 			vertical-align:top;}
+.boxi-6									{background: url('../graphics/boxi_6.jpg') repeat-x left bottom;}
+.boxi-4									{background: url('../graphics/boxi_4.jpg') repeat-y right top;}
+.boxi-8									{background: url('../graphics/boxi_8.jpg') repeat-y left top;}
+.boxi-5									{background: url('../graphics/boxi_5.jpg') no-repeat right bottom;}
+.boxi-7									{background: url('../graphics/boxi_7.jpg') no-repeat left bottom;}
+.boxi-3									{background: url('../graphics/boxi_3.jpg') no-repeat right top; 			vertical-align:top;}
+.boxi-1									{background: url('../graphics/boxi_1.jpg') no-repeat left top;			vertical-align:top; padding:0px;}
+.boxi									{margin:0px 0px 0px 0px;	padding:0px;}
+*/
+/* Top corners and border   */
+.bti 									{height:0px; 	margin:0px 0px 0px 0px; 			background:url('../graphics/boxi.png') no-repeat 100% 0;}
+.bti div 								{height:0px; 	left:-0px; width:0px; 			background:url('../graphics/boxi.png') no-repeat 0 0;		position:relative; font-size:0;line-height:0;}
+
+/* Bottom corners and border */ 
+.bbi 									{height:20px; 	margin:0px 0px 0px 20px; 			background:url('../graphics/boxi.png') no-repeat 100% 100%;}
+.bbi div 								{height:20px; 	left:-20px; width:20px; 			background:url('../graphics/boxi.png') no-repeat 0 100%; 		position:relative;   font-size:0; line-height:0;}
+
+/* Left border */
+.i1i 									{padding:0px 0px 0px 0px;							background:url('../graphics/boxi_l.png') repeat-y 0 0;}
+
+/* Right border */
+.i2i 									{padding:0px 0px 0px 0px;							background:url('../graphics/boxi_r.png') repeat-y 100% 0;}
+
+/* Wrapper for the content. Use it to set the background colour and insert some padding between the borders and the content.*/ 
+.i3i 									{display:block;}
+.i3i 									{padding:0px 0px 0px 0px; margin:0px 0px 0px 0px;}
+.i3i 									{background:url('../graphics/boxi_bg.png');}
+
+/* Make the content wrapper auto clearing so it will contain floats (see http://positioniseverything.net/easyclearing.html). */
+.i3i:after 								{content:"."; display:block; 	height:0px; 		visibility:hidden;}
+.i3i 									{display:inline-block;}
+.i3i 									{display:block;}
+
+
+/* BOX INFO COLUMNS ***************************************************************************************************************************/
+
+
+/* BOX 1 ***************************************************************************************************************************/
+
+/* inner CSS *//**/
+.box1-inner								{background: url('../graphics/box1_0.jpg'); min-height:20px;}
+.box1-2									{background: url('../graphics/box1_2.jpg') repeat-x left top; 			vertical-align:top;}
+.box1-6									{background: url('../graphics/box1_6.jpg') repeat-x left bottom;}
+.box1-4									{background: url('../graphics/box1_4.jpg') repeat-y right top;}
+.box1-8									{background: url('../graphics/box1_8.jpg') repeat-y left top;}
+.box1-5									{background: url('../graphics/box1_5.jpg') no-repeat right bottom;}
+.box1-7									{background: url('../graphics/box1_7.jpg') no-repeat left bottom;}
+.box1-3									{background: url('../graphics/box1_3.jpg') no-repeat right top; 			vertical-align:top;}
+.box1-1									{background: url('../graphics/box1_1.jpg') no-repeat left top;			vertical-align:top; padding:0px;}
+.box1									{margin:0px 0px 10px 0px;	padding:0px;}
+
+/* Top corners and border 
+.bt 									{height:5px; 	margin:0px 0px 0px 100px; 			background:url('../graphics/box1.png') no-repeat 100% 0;}
+.bt div 								{height:5px; 	left:-100px; width:100px; 			background:url('../graphics/box1.png') no-repeat 0 0;		position:relative; font-size:0;line-height:0;}
+*/
+/* Bottom corners and border  
+.bb 									{height:0px; 	margin:0px 0px 0px 100px; 			background:url('../graphics/box1.png') no-repeat 100% 100%;}
+.bb div 								{height:0px; 	left:-100px; width:100px; 			background:url('../graphics/box1.png') no-repeat 0 100%; 		position:relative;   font-size:0; line-height:0;}
+*/
+/* Left border 
+.i1 									{padding:0px 0px 0px 0px;							background:url('../graphics/box1_l.png') repeat-y 0 0;}
+*/
+/* Right border 
+.i2 									{padding:0px 5px 0px 0px;							background:url('../graphics/box1_r.png') repeat-y 100% 0;}
+*/
+/* Wrapper for the content. Use it to set the background colour and insert some padding between the borders and the content. 
+.i3 									{display:block;}
+.i3 									{padding:0px 0px 0px 0px; margin:0px 0px 0px 0px;}
+.i3 									{background:url('../graphics/box1_bg.png');}
+*/
+/* Make the content wrapper auto clearing so it will contain floats (see http://positioniseverything.net/easyclearing.html). 
+.i3:after 								{content:"."; display:block; 	height:0px; 		visibility:hidden;}
+.i3 									{display:inline-block;}
+.i3 									{display:block;}
+*/
+
+/* BOX 1 ***************************************************************************************************************************/
+
+/* BOX 4 ********************************************************************************************************************************/
+
+/* inner CSS *//**/
+.box4-inner								{background: url('../graphics/box4_0.jpg'); min-height:20px;}
+.box4-2									{background: url('../graphics/box4_2.jpg') repeat-x left top; 			vertical-align:top;}
+.box4-6									{background: url('../graphics/box4_6.jpg') repeat-x left bottom;}
+.box4-4									{background: url('../graphics/box4_4.jpg') repeat-y right top;}
+.box4-8									{background: url('../graphics/box4_8.jpg') repeat-y left top;}
+.box4-5									{background: url('../graphics/box4_5.jpg') no-repeat right bottom;}
+.box4-7									{background: url('../graphics/box4_7.jpg') no-repeat left bottom;}
+.box4-3									{background: url('../graphics/box4_3.jpg') no-repeat right top; 			vertical-align:top;}
+.box4-1									{background: url('../graphics/box4_1.jpg') no-repeat left top;			vertical-align:top; padding:0px;}
+.box4									{margin:0px 0px 10px 0px;	padding:0px;/*margin:0px 0px 10px 0px;	padding:30px 0px 0px 0px; border:0px aqua solid; background:url('../graphics/box4top.png') no-repeat scroll left top;*/}
+
+
+/* Top corners and border  
+.bt4 									{height:5px; 	margin:0px 0px 0px 100px; 			background:url('../graphics/box4.png') no-repeat 100% 0;}
+.bt4 div 								{height:5px; 	left:-100px; width:100px; 			background:url('../graphics/box4.png') no-repeat 0 0;		position:relative; font-size:0;line-height:0;}
+*/
+/* Bottom corners and border  
+.bb4 									{height:0px; 	margin:0px 0px 0px 100px; 			background:url('../graphics/box4.png') no-repeat 100% 100%;}
+.bb4 div 								{height:0px; 	left:-100px; width:100px; 			background:url('../graphics/box4.png') no-repeat 0 100%; 		position:relative;   font-size:0; line-height:0;}
+*/
+/* Left border 
+.i14 									{padding:0px 0px 0px 5px;							background:url('../graphics/box4_l.png') repeat-y 0 0;}
+*/
+/* Right border 
+.i24 									{padding:0px 0px 0px 0px;							background:url('../graphics/box4_r.png') repeat-y 100% 0;}
+*/
+/* Wrapper for the content. Use it to set the background colour and insert some padding between the borders and the content. 
+.i34 									{display:block;}
+.i34 									{padding:0px 0px 0px 0px; margin:0px 0px 0px 0px;}
+.i34 									{background:url('../graphics/box4_bg.png');}
+*/
+/* Make the content wrapper auto clearing so it will contain floats (see http://positioniseverything.net/easyclearing.html). 
+.i34:after 								{content:"."; display:block; 	height:0px; 		visibility:hidden;}
+.i34 									{display:inline-block;}
+.i34 									{display:block;}
+*/
+
+/* BOX 4 ********************************************************************************************************************************/
+
+
+
+/* MENU TOP ***************************************************************************************/
+ /* do not alter*/
+.ddsmoothmenu							{width: 100%;}
+.ddsmoothmenu ul						{z-index:100;margin: 0;padding: 0;list-style-type: none;}
+.ddsmoothmenu ul li						{position: relative;display: inline;float: left;}
+.ddsmoothmenu ul li a					{display: block;}
+ /* do not alter*/
+
+/* set top level padding */
+.ddsmoothmenu ul li a					{padding: 9px 10px 7px 15px;}
+
+* html .ddsmoothmenu ul li a			{/*IE6 hack to get sub menu links to behave correctly*/display: inline-block;}
+
+/*1st sub level menu*/
+.ddsmoothmenu ul li ul					{position: absolute;left: 0;display: none; /*collapse all sub menus to begin with*/visibility: hidden; }
+.ddsmoothmenu ul li ul					{-moz-border-radius: 10px; border-radius: 10px; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; background:url('../graphics/sub_bg.png') no-repeat scroll left top; border:0px solid #7EC0B2;}
+
+.ddsmoothmenu ul li ul li				{display: list-item;float: none;}
+.ddsmoothmenu ul li ul li ul			{top: 0;}
+
+/* set sub level width */
+.ddsmoothmenu ul li ul li a				{min-width:100px; white-space:nowrap;}
+
+/* set sub level padding */
+.ddsmoothmenu ul li ul li a				{padding:6px 10px 6px 10px; margin-bottom:0px; }
+
+/* Holly Hack for IE \*/
+* html .ddsmoothmenu					{height: 1%;} /*Holly Hack for IE7 and below*/
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass							{position: absolute;top: 16px;right: 15px;}
+
+.rightarrowclass						{position: absolute;top: 18px;right: 40px;}
+
+/* ######### CSS for shadow added to sub menus  ######### */
+
+.ddshadow								{position: absolute;left: 0;top: 0;width: 0;height: 0;background: silver;}
+
+.toplevelshadow							{opacity: 0.0;filter: alpha(opacity = 0);}
+/* MENU TOP ***************************************************************************************/
+
+
+/* MENU SIDE ***************************************************************************************/
+/* set the position of the main buttons*/
+.ddsmoothmenu-v 						{margin:0px 0px 0px 0px;}
+
+/* set the main button width */
+.ddsmoothmenu-v ul						{width: 218px;  margin:0px 0px 0px 0px; padding-top:5px; }
+.ddsmoothmenu-v ul						{border-top: 1px solid transparent}			/* top of all buttons - use dark color here */
+.ddsmoothmenu-v ul						{border-bottom: 1px solid transparent;}		/* bottom of all buttons - use light color here*/
+
+/* set the sub level button width  */
+.ddsmoothmenu-v ul li ul				{width: 170px; margin-top:-1px;}
+.ddsmoothmenu-v ul li ul a				{padding:5px 0px 5px 20px;}
+
+/* set the main button border color */
+.ddsmoothmenu-v ul li a					{border-top: 1px solid transparent;}		/* use light color here*/
+.ddsmoothmenu-v ul li a					{border-bottom: 1px solid transparent;}		/* use dark color here */
+
+.ddsmoothmenu-v ul						{margin: 0;padding: 0;list-style-type: none;}
+.ddsmoothmenu-v ul li					{position: relative;}
+
+/* Top level menu links style */
+.ddsmoothmenu-v ul li a					{display: block; overflow:hidden;padding: 7px 35px 5px 15px; text-decoration:none; height:23px;} /*force hasLayout in IE7 */
+
+/*Sub level menu items */
+.ddsmoothmenu-v ul li ul				{position: absolute; top: 0; visibility: hidden;}  
+
+/* Holly Hack for IE \*/
+* html .ddsmoothmenu-v ul li 			{float: left; height: 1%; }
+* html .ddsmoothmenu-v ul li a 			{height: 1%; }
+/* End */
+/* MENU SIDE ***************************************************************************************/
+
+
+
+
+/* FONT STYLES ***************************************************************************************/
+
+ /* seo h1/h2 */										
+#seo_1 h1								{color:#6B2F12;	text-indent: 0px;	font-size: 22px;	font-family: "Georgia", "Trebuchet MS", Arial, Helvetica, sans-serif;	text-shadow: 1px 1px 1px #ffffff;		padding: 10px 0px 5px 0px;	 	margin: 0px 0px 0px 0px;	font-style:italic; 	font-weight:normal;}
+#seo_2 h2								{color:#AB4A1D;	text-indent: 0px;	font-size: 12px;	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;			text-shadow: 1px 1px 1px #ffffff;		padding: 5px 0px 5px 0px;		margin: 0px 0px 0px 0px;	font-style:normal; 	line-height:1.3em; 	letter-spacing:.005em;}
+
+#logo_tagline							{color:#AB4A1D;						font-size: 11px;	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+/*clock*/
+#clock 									{color:#6B2F12;  	text-align:left; 	font-size:14px; 		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;	font-weight:bold;	text-decoration:none; }  
+
+/* -------------------------- top menu styles--------------------- */
+
+
+/* topmenu font color */
+.ddsmoothmenu ul li a:link				{color: #6B2F12; 	text-decoration: none;	text-shadow: 1px 1px 1px #ffffff;}
+.ddsmoothmenu ul li a:visited			{color: #6B2F12; 	text-decoration: none;	text-shadow: 1px 1px 1px #ffffff;}
+.ddsmoothmenu ul li a:hover				{color: #AB4A1D; 	text-decoration: none;	text-shadow: 1px 1px 1px #ffffff;}
+.ddsmoothmenu ul li a:active			{color: #AB4A1D; 	text-decoration: none;	text-shadow: 1px 1px 1px #ffffff;}
+.ddsmoothmenu ul li a:selected			{color: #AB4A1D; 	text-decoration: none;	text-shadow: 1px 1px 1px #ffffff;}
+
+/* topmenu SUBMENU font color */
+.ddsmoothmenu ul li ul li a:link		{color: #726744; 	text-decoration: none;	text-shadow: 1px 1px 1px #ffffff;}
+.ddsmoothmenu ul li ul li a:visited		{color: #726744; 	text-decoration: none;	text-shadow: 1px 1px 1px #ffffff;}
+.ddsmoothmenu ul li ul li a:hover		{color: #ffffff; 	text-decoration: none;	text-shadow: 0px 0px 0px #ffffff;}
+.ddsmoothmenu ul li ul li a:active		{color: #ffffff; 	text-decoration: none;	text-shadow: 1px 1px 1px #ffffff;}
+.ddsmoothmenu ul li ul li a:selected	{color: #ffffff; 	text-decoration: none;	text-shadow: 1px 1px 1px #ffffff;}
+
+/* topmenu button background color */
+.ddsmoothmenu ul li a					{background-color:transparent; background:url('../graphics/topmenu_bg.png') no-repeat left top;}
+.ddsmoothmenu ul li a:link				{background-color:transparent; background:url('../graphics/topmenu_bg.png') no-repeat left top;}
+.ddsmoothmenu ul li a:visited			{background-color:transparent; background:url('../graphics/topmenu_bg.png') no-repeat left top;}
+.ddsmoothmenu ul li a:hover				{background-color:transparent; background:url('../graphics/topmenu_bg.png') no-repeat -278px top;}
+.ddsmoothmenu ul li a:active			{background-color:transparent; background:url('../graphics/topmenu_bg.png') no-repeat left top;}
+.ddsmoothmenu ul li a:selected			{background-color:transparent; background:url('../graphics/topmenu_bg.png') no-repeat left top;}
+
+/* topmenu SUBMENU button background color */
+.ddsmoothmenu ul li ul li a:link		{background-color: transparent; background-image:none;}
+.ddsmoothmenu ul li ul li a:visited		{background-color: transparent; background-image:none;}
+.ddsmoothmenu ul li ul li a:hover		{background-color: transparent; background:#ABB461; -moz-border-radius: 8px; border-radius: 8px;}
+.ddsmoothmenu ul li ul li a:active		{background-color: transparent; background-image:none;}
+.ddsmoothmenu ul li ul li a:selected	{background-color: transparent; background-image:none;}
+
+/* topmenu border color*/
+.ddsmoothmenu ul li a					{border-right: 0px solid #121867; border-left: 0px solid #121867;}
+
+/* topmenu SUBMENU borders */
+.ddsmoothmenu ul li ul li a				{border-right: 0px solid #330000; border-left: 0px solid #330000; border-top: 0px solid #330000; border-bottom: 0px solid #330000;}
+
+
+/* -------------------------- side menu styles--------------------- */
+
+/* sidemenu font color */
+.ddsmoothmenu-v ul li a:link 			{color: #6B2F12; text-decoration: none; text-indent:10px;		text-shadow: 1px 1px 1px #ffffff;}
+.ddsmoothmenu-v ul li a:visited 		{color: #6B2F12; text-decoration: none; text-indent:10px;		text-shadow: 1px 1px 1px #ffffff;}
+.ddsmoothmenu-v ul li a:hover			{color: #AB4A1D; text-decoration: none; text-indent:15px;		text-shadow: 1px 1px 1px #ffffff;}
+.ddsmoothmenu-v ul li a:active 			{color: #AB4A1D; text-decoration: none; text-indent:15px;		text-shadow: 1px 1px 1px #ffffff;}
+.ddsmoothmenu-v ul li a.selected		{color: #AB4A1D; text-decoration: none; text-indent:15px;		text-shadow: 1px 1px 1px #ffffff;}
+
+/* sidemenu SUBMENU font color */
+.ddsmoothmenu-v ul li ul a 				{color: #FFFFFF; text-shadow: 0px 0px 0px #ffffff;}
+.ddsmoothmenu-v ul li ul a:link 		{color: #FFFFFF; text-shadow: 0px 0px 0px #ffffff;}
+.ddsmoothmenu-v ul li ul a:visited 		{color: #FFFFFF; text-shadow: 0px 0px 0px #ffffff;}
+.ddsmoothmenu-v ul li ul a:hover 		{color: #EFE8CC; text-shadow: 0px 0px 0px #ffffff;}
+.ddsmoothmenu-v ul li ul a:active 		{color: #EFE8CC; text-shadow: 0px 0px 0px #ffffff;}
+.ddsmoothmenu-v ul li ul a:selected 	{color: #EFE8CC; text-shadow: 0px 0px 0px #ffffff;}
+
+/* sidemenu button background color */
+.ddsmoothmenu-v ul li a:link 			{background-image:url('../graphics/sidemenu.png'); background-position:center top; 		background-color: transparent;/**/}
+.ddsmoothmenu-v ul li a:visited 		{background-image:url('../graphics/sidemenu.png'); background-position:center top; 		background-color: transparent;/**/}
+.ddsmoothmenu-v ul li a:hover			{background-image:url('../graphics/sidemenu.png'); background-position:center -40px;	background-color: transparent;/**/}
+.ddsmoothmenu-v ul li a:active 			{background-image:url('../graphics/sidemenu.png'); background-position:center -40px;	background-color: transparent;/**/}
+.ddsmoothmenu-v ul li a.selected		{background-image:url('../graphics/sidemenu.png'); background-position:center -40px;	background-color: transparent;/**/}
+
+/* sidemenu SUBMENU button background color */
+.ddsmoothmenu-v ul li ul a 				{background-color: #ABB461; background-image:none;}
+.ddsmoothmenu-v ul li ul a:link 		{background-color: #ABB461; background-image:none;}
+.ddsmoothmenu-v ul li ul a:visited 		{background-color: #ABB461; background-image:none;}
+.ddsmoothmenu-v ul li ul a:hover 		{background-color: #727F30; background-image:none;}
+.ddsmoothmenu-v ul li ul a:active 		{background-color: #727F30; background-image:none;}
+.ddsmoothmenu-v ul li ul a:selected 	{background-color: #727F30; background-image:none;}
+
+/* sidemenu border color 
+.ddsmoothmenu-v ul li ul a 				{border-left:1px #000000 solid ; border-right:1px #000000 solid ; margin-right:0px;}
+*/
+/* menu font type, size and family */
+.ddsmoothmenu ul						{font: normal 16px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+.ddsmoothmenu ul li ul li a				{font: normal 11px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+.ddsmoothmenu-v ul						{font: normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+.ddsmoothmenu-v ul li ul li a			{font: normal 14px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+/* -------------------------- box info columns --------------------- */
+.infocontent 							{margin:0px 0px 0px 0px;	 }
+.infocontent h3 						{text-indent:0px;}
+
+.boxi-content h3						{color: #6B2F12;	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:18px; 		margin: 0px 0px 0px 0px;	padding:1px 0px 5px 0px;	font-weight:normal;			font-style:italic;  text-align:left;}
+.boxi-content h4						{color: #999999;	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:18px;		margin: 0px 0px 0px 0px;	padding:0px 0px 1px 0px; 		font-weight:bold;}
+.boxi-content h5						{color: #726744; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:10px;		margin: 0px 0px 0px 0px;	padding:1px 0px 1px 0px; 		font-weight:normal;}
+.boxi-content p							{color: #B7501F;	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:12px; 		margin: 0px 0px 0px 0px;	padding:0px 0px 0px 0px; 		line-height:1.4em; 	vertical-align:top;}
+.boxi-content							{color: #B7501F;	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:12px;		margin: 0px 0px 0px 0px;	padding:10px 5px 10px 15px;		min-height: 50px;	vertical-align: top;}
+	
+.boxi-content a:link					{color: #B7501F;	text-decoration:underline;}
+.boxi-content a:visited					{color: #B7501F; 	text-decoration:underline;}
+.boxi-content a:hover					{color: #333333; 	text-decoration:none;}
+.boxi-content a:active					{color: #B7501F; 	text-decoration:underline;}
+
+.boxi-content ul						{color: #B7501F;}
+
+
+/* -------------------------- box1 styles --------------------- */
+.menucontent 							{}
+.menucontent h3 						{text-indent:0px;}
+
+.sidecontent 							{}
+.sidecontent h3 						{text-indent:0px;}
+
+
+.box1-content h3						{/*  background: url('../graphics/h3_box1_bg.png') no-repeat left top; height:42px; width:200px;*/}
+.box1-content h3						{color: #6B2F12; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:22px; *font-size:16px; 		text-shadow: 1px 1px 1px #ffffff;			margin: 0px 0px 0px 0px; 	padding:5px 15px 4px 0px;		font-weight:normal;	font-style:italic; text-align:right;}
+.box1-content h4						{color: #783414; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:14px; 		margin: 0px 0px 0px 0px; 	padding:3px 0px 0px 15px; 		font-weight:bold;}
+.box1-content h5						{color: #783414; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:12px;		margin: 0px 0px 0px 0px; 	padding:5px 0px 2px 15px; 		font-weight:normal;}
+.box1-content p							{color: #9E640B; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:12px; 		margin: 0px 0px 0px 0px;	padding:5px 0px 5px 10px; 		line-height:1.4em; 	vertical-align:top;}
+.box1-content							{color: #9E640B;	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:12px;		margin: 0px 0px 0px 0px;	padding:10px 9px 1px 1px;		min-height: 20px;	vertical-align: top;}
+
+.box1-content a:link					{color: #9E640B; 	text-decoration:underline;}
+.box1-content a:visited					{color: #9E640B; 	text-decoration:underline;}
+.box1-content a:hover					{color: #333333; 	text-decoration:none;}
+.box1-content a:active					{color: #9E640B; 	text-decoration:underline;}
+
+.box1-content ul						{color: #9E640B;}
+
+
+/* -------------------------- box4 styles --------------------- */
+.centercontent 							{margin:0px 0px 0px 0px;	 }
+.centercontent h3 						{text-indent:5px;}
+
+.box4-content h3						{/*background: url('../graphics/h3_bg.png') no-repeat 10px top; height:40px; width:710px;*/}		
+.box4-content h3						{color: #6B2F12;	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;			font-size:22px; *font-size:16px; 		text-shadow: 1px 1px 1px #ffffff;			margin: 0px 0px 0px 0px;	padding:5px 15px 4px 15px;		font-weight:normal;	font-style:italic; text-shadow: 1px 1px 1px #ffffff;}
+.box4-content h4						{color: #8C7D4C;	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:16px;		margin: 0px 0px 0px 0px;	padding:3px 0px 0px 15px;		font-weight:bold;}
+.box4-content h5						{color: #783414; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:12px;		margin: 0px 0px 0px 0px;	padding:5px 0px 2px 15px;		font-weight:normal;}
+.box4-content p							{color: #9E640B;	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:14px; 		margin: 0px 0px 0px 0px;	padding:5px 0px 5px 10px; 		line-height:1.4em; 	vertical-align:top;}
+.box4-content							{color: #9E640B;	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:14px;		margin: 0px 0px 0px 0px;	padding:10px 9px 1px 10px;	min-height: 50px;	vertical-align: top;}
+	
+.box4-content a:link					{color: #9E640B;	text-decoration:underline;}
+.box4-content a:visited					{color: #9E640B; 	text-decoration:underline;}
+.box4-content a:hover					{color: #333333; 	text-decoration:none;}
+.box4-content a:active					{color: #9E640B; 	text-decoration:underline;}
+
+.box4-content ul						{color: #9E640B;}
+
+
+/* -------------------------- footer styles --------------------- */
+#footer									{color: #783414; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 		font-size:13px;}
+#footer p								{color: #783414; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;		font-size:13px;}
+#footer a:link							{color: #783414; 	text-decoration:underline;}
+#footer a:visited						{color: #783414; 	text-decoration:underline;}
+#footer a:hover							{color: #333333; 	text-decoration:none;}
+#footer a:active						{color: #783414; 	text-decoration:underline;}
+
+
+/* company name used in Privacy page */
+.redfont 								{color:#783414; 	font-weight:bold;}
+
+
+/* -------------------------- Global styles --------------------- */
+
+body 									{color:	#EDEBE4; 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;  font-size:13px; line-height:1.5em;}
+textarea								{color: #000000;}
+input									{color: #000000;}
+a:link 									{color: #2C0402;	text-decoration:none;}
+a:visited 								{color: #2C0402;	text-decoration:none;}
+a:hover 								{color: #000000; 	text-decoration:underline;}
+a:active 								{color: #2C0402;	text-decoration:none;}
+a:focus 								{color: #2C0402;	text-decoration:none;}
+
+/* FONT STYLES ***************************************************************************************/
+.catalog 								{}
+.product 								{border: 1px solid #cccccc; height: 200px; min-width: 100px; text-align: left; padding: 10px; vertical-align: top;}
+.paypalbtn								{height: 36px; border: 1px #f7f7f7 solid; text-align: center; width: auto; display: block; clear: both;padding: 2px;}
+
+.component-index						{border: 1px #724639 solid; padding:5px; display:block; height:80px;}
+.features-index							{margin: 10px;border: 1px solid #724639;padding: 5px;display: block;min-height: 80px;}
+.features-title							{font-size: 16px;font-variant: small-caps;color: #724639;padding-right: 10px;padding-left: 10px;}
+
+.demopic 								{padding:5px 5px 5px 5px;}
+
+#icon1									{margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; vertical-align:top; text-align:left; border:0px;}
+#icon2									{margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; vertical-align:top; text-align:left;border:0px;}
+#icon3									{margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; vertical-align:top; text-align:left;border:0px;}
+
+input.button 							{width:auto !important; margin-right:2px; margin-left:3px; border:1px solid #1F2E19; border-right-color:#1F2E19; border-bottom-color:#1F2E19; padding:1px .5em; background:#1F2E19 url(../graphics/submit-button-bg.jpg) left center repeat-x; color:#FFFFFF;}
+button 									{width:auto !important; margin-right:2px; margin-left:3px; border:1px solid #28292D; border-right-color:#28292D; border-bottom-color:#28292D; padding:1px .5em; background:#28292D url(../graphics/submit-button-bg.jpg) left center repeat-x; color:#3D4026;}
+input.button:active 					{border:1px solid #28292D; border-right-color:#28292D; border-bottom-color:#28292D;}
+button:active 							{border:1px solid #28292D; border-right-color:#28292D; border-bottom-color:#28292D;}
+input.button:hover 						{cursor:pointer;}
+button:hover 							{cursor:pointer;}
+input.button.primary 					{border:0px solid #28292D; border-right-color:#28292D; border-bottom-color: #28292D; background:#28292D url(../graphics/submit-button-bg.jpg) right center repeat-x;}
+button.primary 							{border:0px solid #28292D; border-right-color:#28292D; border-bottom-color: #28292D; background:#28292D url(../graphics/submit-button-bg.jpg) right center repeat-x;}
+input.button.primary:active 			{border:1px solid #28292D; border-right-color:#28292D; border-bottom-color:#28292D;}
+
+/* zoom menu */
+.demo img 								{border:0px none; padding:0px; width:48px; height:48px; vertical-align:top;}
+#zoom_menu img 							{padding:0px 4px;}
+#zoom_menu div.jqDock					{}
+div.jqDockLabel 						{border:0px none; padding:0px 4px; padding-bottom:50px;}
+div.jqDockLabelLink 					{cursor:pointer;}
+div.jqDockLabelImage 					{cursor:default;}
+div.jqDockLabel 						{font-family:Arial, Helvetica, sans-serif;  font-weight:normal; font-size:20px; white-space:nowrap; color:#034061; background-color:transparent;}
+
+.address 								{min-height:250px;}
+.contact 								{min-height:250px;}
+.telephone 								{min-height:250px;}
+
+/* list of websafe fonts, and similar fall backs */
+/*
+font-family: 'Bookman Old Style', serif;
+font-family: Arial, Helvetica, sans-serif;
+font-family: 'Arial Black', Gadget, sans-serif;
+font-family: 'Comic Sans MS', cursive;
+font-family: Garamond, serif;
+font-family:  serif;
+font-family: Impact, Charcoal, sans-serif;
+font-family: 'Lucida Console', Monaco, monospace;
+font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif
+font-family: 'MS Sans Serif', Geneva, sans-serif;
+font-family: 'MS Serif', 'New York', sans-serif;
+font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+font-family: Symbol, sans-serif;
+font-family: 'Times New Roman', Times, serif;
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+font-family: Verdana, Geneva, sans-serif;
+font-family: Tahoma, Geneva, sans-serif;
+font-family: Century Gothic, sans-serif;
+font-family: Gill Sans / Gill Sans MT, sans-serif;

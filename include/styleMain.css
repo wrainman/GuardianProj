@@ -1,0 +1,129 @@
+h1 {
+  font-size: 7em;
+}
+
+.bg {
+  
+  position: fixed;
+  width: 100%;
+  height: 800px; /*same height as jumbotron */
+  top:0;
+  left:0;
+  z-index: -1;
+  font-size: 22px;
+  background-size: cover;
+}
+html, body {
+	background: #eeeeee;
+	margin: 30px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	border: 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	width: auto;
+}
+form {
+	padding: 35px;
+	background-color: black;
+	border: #B1C3D9 3px solid;
+	margin: 25px auto 0px;
+	margin-top: 0px;
+	width: auto;
+	border-radius: 18px;
+	font-size: 18px;
+	color: white;
+}
+.admin_tabel {
+	padding: 10px;
+	background-color: #e2eefa;
+	border: #B1C3D9 1px solid;
+	width: 900px;
+}
+.tabel_header, .tabel_header:hover {
+	background-color: #999999;		
+}
+tr:hover {
+	background-color: #FFCC99;		
+}
+#h1 {
+	font-size: 10em;
+	margin-top:0px;
+	text-align:center;
+}
+
+.btn-lg {
+-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px #20538D;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+-webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.btn-lg:hover {
+    background: #ffffff;
+    border: solid 1px #2A4E77;
+    text-decoration: none;
+}
+.btn-lg:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #2E5481;
+    border: solid 1px #203E5F;
+}
+
+}
+a:hover {
+	text-decoration: none;
+}
+.red {
+	font-weight:bold;
+	color:#FF0000;
+}
+.label {
+	height:14px;
+	margin-top:25px;
+	margin-bottom: 0px;
+	text-align:left;
+	font-weight:bold;
+}
+.button {
+	float:right;
+	font-weight:bold;
+}
+.right {
+	text-align:left;
+	margin:15px;
+	font-size: 20px;
+}
+.center {
+	text-align:center;
+}
+.btn-group-wrap {
+        text-align:center;
+}
+a {
+	color: white;
+}
+
+}
+ a:link, a:visited, a:active {
+	color: white;
+}
+
+.cbtn a{
+	color: white;
+}
+

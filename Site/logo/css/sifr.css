@@ -1,0 +1,26 @@
+﻿/*****************************************************************************
+scalable Inman Flash Replacement (sIFR) version 3.
+
+Copyright 2006 â€“ 2008 Mark Wubben, <http://novemberborn.net/>
+
+Older versions:
+* IFR by Shaun Inman
+* sIFR 1.0 by Mike Davidson, Shaun Inman and Tomas Jogin
+* sIFR 2.0 by Mike Davidson, Shaun Inman, Tomas Jogin and Mark Wubben
+
+See also <http://novemberborn.net/sifr3> and <http://wiki.novemberborn.net/sifr3>.
+
+This software is licensed and provided under the CC-GNU LGPL.
+See <http://creativecommons.org/licenses/LGPL/2.1/>
+*****************************************************************************/
+
+@media screen {
+  .sIFR-flash {visibility: visible !important;margin: -20px 0px 0px 0px;padding: 0;}
+  
+  .sIFR-replaced, .sIFR-ignore { visibility: visible !important;}
+  
+  .sIFR-alternate {position: absolute;left: 0;top:0px;width: 0;height:100px;display: block;overflow: hidden;}
+  
+
+}
+
