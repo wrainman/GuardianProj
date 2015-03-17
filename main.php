@@ -1,7 +1,7 @@
 <?
 include_once 'include/processes.php';
 $Login_Process = new Login_Process;
-$Login_Process->check_status($_SERVER['SCRIPT_NAME']);
+$Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -11,74 +11,22 @@ $Login_Process->check_status($_SERVER['SCRIPT_NAME']);
 
 <title>User interface</title>
 <link href="include/style.css" rel="stylesheet" type="text/css">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 <head>
-<style type="text/css">
-html, body {
-   margin-bottom: 1%; 
-   height: 100%;
-   background: #66ddba; }
-form { border-radius: 4%;}
-h1, .h1 {
-   font-size: 200%;
-   font-family: 'Oswald', sans-serif;
-   color: #ffa500;}
-.jumbotron, .jumbotron h1, .jumbotron .h1 {
-   background-color: #DD7E66;
-   width: 50%;
-   padding: 1%;
-   margin-top: 0%;
-   font-size: 230%;
-   color: black;
-   margin-bottom: 0;}
-.panel-primary {
-   width: 70%;
-}
-h4, .h4 {
-font-size: 200%;
-}
-.btn .btn-block {
- width: 90%;
- margin-left: auto;
-}
-.signOutbtn{
-    float: right;
-}
-.btn-primary {
- font-size: x-large;
-}
-.page-header {
-   border-bottom: 2px solid blue;}
-   @media (max-width: 768px) {
-  .nav-justified > li {
-    display: table-cell;
-    width: 1%;
-  }
- .nav-justified > li > a  {
-    border-bottom: 1px solid #ddd !important;
-    border-radius: 4px 4px 0 0 !important;
-    margin-bottom: 0 !important;
-  }
-}
-</style>
 <nav class="navbar navbar-inverse">
-  <p><H4 style="color:white">THE SOUTH DAKOTA GUARDIANSHIP</H4></p>
+  <p style="color:white; font-size:200%;">THE SOUTH DAKOTA GUARDIANSHIP</p>
 </nav>
 </head>
 
 <body>
 <div class="container-fluid">
 <form class="bg">
+
 <div>
-<img src="sdgMain.gif" style="height:25%;width:25%;" alt="25"/>
-<div class="signOutbtn">
-<a href="include/processes.php?log_out=true" class="btn btn-xlarge btn-primary">Log out</a>
-</div>
+<img src="sdgMain.gif" class="pic"/>
+	<div class="signOutbtn">
+		<a href="include/processes.php?log_out=true" class="btn btn-xlarge btn-primary">Log out</a>
+	</div>
 </div>
 
 <div class="page-header">
@@ -96,9 +44,11 @@ font-size: 200%;
 <div class="container-fluid">
   <div class="row">
 	<!-- Button trigger modal -->
-	<?php 
-	if($_SESSION['user_level'] == 5) {
-	echo '<button type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#myModal"><h1 style=margin-top: 0px;">My Pass</h1></button>';}?>
+	<?php
+	if ($_SESSION['user_level'] == 5) {
+		echo '<button type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#myModal"><h1 style=margin-top: 0px;">My Pass</h1></button>';
+	}
+?>
   </div>
 </div>
 
@@ -109,7 +59,6 @@ font-size: 200%;
 <div class="box4">
 <!-- #BeginEditable "body1" -->
 				
-
 <h3>Golf Cards</h3>
 
 	<p>Golf for Guardianship is offering you a chance to play golf at each of 
@@ -163,55 +112,52 @@ font-size: 200%;
 
 
 
-
-
-
-
-
-
-
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">My Pass</h4>
+        <h4 class="modal-title" id="myModalLabel">My Pass  -- Choose your course </h4>
       </div>
       <div class="modal-body">
-        <p>
-	<h1>HELLO<h1>
-	<button onClick="window.print()">Print this page</button>
-	<p>
-	<div>
-	   <p>
-		<div class="label">Username:</div>
-		<div class="field"><? echo $_SESSION['username']; ?></div>
-		<div class="label">Email:</div>
-		<div class="field"><? echo $_SESSION['email_address']; ?></div>
-		<div class="label">Name:</div>
-<		div class="field"><? echo $_SESSION['first_name']; ?> <? echo $_SESSION['last_name']; ?></div>
-		<div class="label">Info:</div>
-		<div class="field"><? echo $_SESSION['info']; ?></div>
+		<div class="container-fluid">
+	   	<p>
+		 <div class="field" style="font-size:80%;"><? echo $_SESSION['username']; ?></div>
+	
+		 <div class="field" style="font-size:80%;"><? echo $_SESSION['email_address']; ?></div>
+		
+ 		 <div class="field" style="font-size:80%;"><? echo $_SESSION['first_name']; ?> <? echo $_SESSION['last_name']; ?>
+	</p>
+	</div>
+		<div class="field" style="font-size:80%;"><? echo $_SESSION['info']; ?></div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <a href="anypage.php"><button type="button" class="btn btn-primary">Save changes</button></a>
+        <a href="passconfirmation.php"><button type="button" class="btn btn-primary">NEXT</button></a>
       </div>
     </div>
   </div>
 </div>
-</p>
+</div>
+<!-- Modal END -->
 
 <br />
 <div class="center">
 <a href="edituser.php">My Account</a> | <a href="editpassword.php">My Password</a> | <a href="include/processes.php?log_out=true">Log out</a>
 
-<?php 
-if($_SESSION['user_level'] == 5) {
-echo '<div><a href="admin/admin_center.php">Admin Centers</a></div>';} 
-?>
-</div>
-</div>
-</form>
-</body>
+<?php
+if ($_SESSION['user_level'] == 5) {
+	echo '<div><a href="admin/admin_center.php">Admin Centers</a></div>'; }?>
+		 </div>
+	  </form>
+	</div>
+  </body>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+</html>

@@ -17,7 +17,8 @@ $Login = $Login_Process->log_in($_POST['user'], $_POST['pass'], $_POST['remember
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
+<head>
+	
 <style type="text/css">
    body { background: #66ddba; }
    h1, .h1 {
@@ -36,7 +37,6 @@ $Login = $Login_Process->log_in($_POST['user'], $_POST['pass'], $_POST['remember
    .form-control {
    width:75% } 
 </style>
-<head>
 
 <div class="jumbotron">
 <div class="container-fluid">
@@ -140,9 +140,9 @@ h1 center {
 <?php  echo $New; ?>
 </div>
 
-<a name="add" id="add"></a>
+<!--<a name="add" id="add"></a>-->
 <form action="<?php echo $_SERVER['PHP_SELF']."#add"; ?>" method="post"  margin-top:0px;">
-
+<br />
 <div align="center">
 	<label>First Name</label>	
 	<input name="first_name" type="text" class="form-control" style="width: 70%;" value="<? echo $_POST['first_name']; ?>" />
@@ -158,27 +158,39 @@ h1 center {
 	<input name="email_address" type="email" class="form-control" style="width: 70%;" value="<? echo $_POST['email_address']; ?>"/>
 </div>
 <br />
+<div align="center">
+    <label>Birthdate</label>
+    <br />
+	<input name="info" type="date" form-control" style="width: 70%; text-align: center;" value="<? echo $_POST['birthdate']; ?>"/>
+</div>
+<br />
+<div align="center">
+    <label>Zip Code</label>
+	<input name="info" type="number" class="form-control" style="width: 70%;" value="<? echo $_POST['zipcode']; ?>"/>
+</div>
+<br />
+<div align="center">
+        <label>Username</label>
+	<input name="username" type="text" class="form-control" style="width: 70%;" value="<? echo $_POST['username']; ?>"/>
+</div>
+<br />
+<div align="center">
+	<label>Password</label>
+	<input name="pass1" type="password" class="form-control" style="width: 70%;" value="<? echo $_POST['pass1']; ?>"/>
+</div>
+<br />
+<div align="center">
+        <label>Confirm password</label>
+	<input name="pass2" type="password" class="form-control" style="width: 70%;" value="<? echo $_POST['pass2']; ?>"/>
+<br />
 <br />
 <div align="center">
         <label>Code</label>
 	<input name="info" type="text" class="form-control" style="width: 70%;" value="<? echo $_POST['info']; ?>"/>
 </div>
-<br />
-<div align="center">
-        <lable>Username</lable>
-	<input name="username" type="text" class="form-control" style="width: 70%;" value="<? echo $_POST['username']; ?>"/>
-</div>
-<br />
-<div align="center">
-	<lable>Password</lable>
-	<input name="pass1" type="password" class="form-control" style="width: 70%;" value="<? echo $_POST['pass1']; ?>"/>
-</div>
-<br />
-<div align="center">
-        <lable>Confirm password</lable>
-	<input name="pass2" type="password" class="form-control" style="width: 70%;" value="<? echo $_POST['pass2']; ?>"/>
-<br />
 
+<br />
+<br />
 <div class="form-actions">
 <input name="process" class="btn btn-large btn-info" type="submit" id="process" value="Add User" />
 
