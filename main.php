@@ -14,7 +14,7 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 
 <head>
 <nav class="navbar navbar-inverse">
-  <p style="color:white; font-size:200%;">THE SOUTH DAKOTA GUARDIANSHIP</p>
+  <p style="color:white; font-size:260%;">THE SOUTH DAKOTA GUARDIANSHIP</p>
 </nav>
 </head>
 
@@ -45,7 +45,7 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
   <div class="row">
 	<!-- Button trigger modal -->
 	<?php
-	if ($_SESSION['user_level'] == 5) {
+	if ($_SESSION['user_level'] == 4) {
 		echo '<button type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#myModal"><h1 style=margin-top: 0px;">My Pass</h1></button>';
 	}
 ?>

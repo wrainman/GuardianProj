@@ -40,23 +40,12 @@ $Login = $Login_Process->log_in($_POST['user'], $_POST['pass'], $_POST['remember
 
 <div class="jumbotron">
 <div class="container-fluid">
-  <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-  <img src="sdgMainr.gif" style="margin-top:0%; margin-botton: 0%; margin-left:1px;" alt="Smiley face" class="imgSDG" height="25%" width="25%">
-  <tr>
-    <td><strong><h1>The South Dakota Guardianship Program, Inc.</h1></strong></td>
-  </tr>
+
+<img src="sdgMainr.gif" style="margin-top:0%; margin-botton: 0%; margin-left:1px;" alt="Smiley face" class="imgSDG" height="25%" width="25%">
+
+<tr>
+  <td><strong><h1>The South Dakota Guardianship Program, Inc.</h1></strong></td>
+</tr>
 </div>
 </div>
 </head>
@@ -100,7 +89,7 @@ $Login = $Login_Process->log_in($_POST['user'], $_POST['pass'], $_POST['remember
 <br />
 
 <?php
- Echo "<h5><a href=http://www.sdguardians.com/>Copyright 2011.The Guardianship Program, Inc. All Rights Reserved.</a></h5>"
+ Echo "<h3><a href=http://www.sdguardians.com/>Copyright 2011.The Guardianship Program, Inc. All Rights Reserved.</a></h3>"
 ?>
 </div> <!--end of center align -->
 </div>
@@ -161,16 +150,16 @@ h1 center {
 <div align="center">
     <label>Birthdate</label>
     <br />
-	<input name="info" type="date" form-control" style="width: 70%; text-align: center;" value="<? echo $_POST['birthdate']; ?>"/>
+	<input name="birthdate" type="date" class="form-control" style="width: 70%; text-align: center;" value="<? echo $_POST['birthdate']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label>Zip Code</label>
-	<input name="info" type="number" class="form-control" style="width: 70%;" value="<? echo $_POST['zipcode']; ?>"/>
+	<input name="zipcode" type="number" class="form-control" style="width: 70%;" value="<? echo $_POST['zipcode']; ?>"/>
 </div>
 <br />
 <div align="center">
-        <label>Username</label>
+    <label>Username</label>
 	<input name="username" type="text" class="form-control" style="width: 70%;" value="<? echo $_POST['username']; ?>"/>
 </div>
 <br />
@@ -180,13 +169,13 @@ h1 center {
 </div>
 <br />
 <div align="center">
-        <label>Confirm password</label>
+    <label>Confirm password</label>
 	<input name="pass2" type="password" class="form-control" style="width: 70%;" value="<? echo $_POST['pass2']; ?>"/>
 <br />
 <br />
 <div align="center">
-        <label>Code</label>
-	<input name="info" type="text" class="form-control" style="width: 70%;" value="<? echo $_POST['info']; ?>"/>
+    <label>Code</label>
+	<input name="code" type="text" class="form-control" style="width: 70%;" value="<? echo $_POST['code']; ?>"/>
 </div>
 
 <br />
