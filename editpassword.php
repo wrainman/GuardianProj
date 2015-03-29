@@ -22,7 +22,7 @@ $Edit = $Login_Process->edit_password($_POST, $_POST['process']);
    font-size: 175% !important;
  }
  h1{
-  font-size: 400% !important;
+  font-size: 350% !important;
  }
  .pic {
  	height: 19%;
@@ -101,11 +101,16 @@ $Edit = $Login_Process->edit_password($_POST, $_POST['process']);
  	width: 29%;
  } 
 }
+.container-fluid {
+	padding-right: 0px !important;
+	padding-left: 0px !important; 
+}
 </style>
 
 <title>Edit password</title>
 <body>
 	
+<div class="container-fluid">	
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" style="height: 100%;">
 
 <div class="right" style="margin-top:-8px; margin-right:-6px;"><a href="main.php">Home</a></div>
@@ -115,18 +120,18 @@ $Edit = $Login_Process->edit_password($_POST, $_POST['process']);
 <div class="red"><?php echo $Edit; ?></div>
 <br />
 
-<div class="label">Current Pass:</div>
-<input name="pass" type="password" class="field" />
+<div class="label" style="color: black;">Current Pass:</div>
+<input name="pass" type="password" class="form-control input-lg" />
 <br />
 <br />
 
-<div class="label">New Password:</div>
-<input name="pass1" type="password" class="field" />
+<div class="label" style="color: black;">New Password:</div>
+<input name="pass1" type="password" class="form-control input-lg" />
 <br />
 <br />
 
-<div class="label">Confirm New:</div>
-<input name="pass2" type="password" class="field"/>
+<div class="label" style="color: black;">Confirm New:</div>
+<input name="pass2" type="password" class="form-control input-lg"/>
 <br />
 
 <div class="right">
@@ -135,8 +140,8 @@ $Edit = $Login_Process->edit_password($_POST, $_POST['process']);
 </div>
 </div> <!--end container -->
 </form>
+</div> <!--end container outer -->
 </body>
-
 
 <link href="include/style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">

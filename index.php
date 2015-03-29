@@ -20,25 +20,25 @@ $Login = $Login_Process->log_in($_POST['user'], $_POST['pass'], $_POST['remember
 <head>
 	
 <style type="text/css">
-   body { background: #66ddba; }
+   body { background: white; }
    h1, .h1 {
-   font-size: 535%;
+   font-size: 635%;
    margin-top: 5%;
    font-family: 'Oswald', sans-serif;
    color: #ffa500;}
    .jumbotron, .jumbotron h1, .jumbotron .h1 {
-   background-color: #66ddba;
+   background-color: #60e4a2;
    width: 100%;
    padding: 1%;
    margin-top: 0%;
    font-size: 200%;
    color: black;
-   margin-bottom: 0;}
+   margin-bottom: -5px;}
    .form-control {
    width:75% } 
 </style>
 
-<div class="jumbotron">
+<div class="jumbotron" style="box-shadow: 0 8px 40px #e5e5e5;">
 <div class="container-fluid">
 
 <img src="sdgMainr.gif" style="margin-top:0%; margin-botton: 0%; margin-left:1px;" alt="Smiley face" class="imgSDG" height="25%" width="25%">
@@ -65,11 +65,11 @@ $Login = $Login_Process->log_in($_POST['user'], $_POST['pass'], $_POST['remember
 <br />
 
   <span id="sizing-addon1">Username</span>
-  <input type="text" id="user" name="user" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+  <input type="text" id="user" name="user" class="form-control input-lg" placeholder="Username" aria-describedby="sizing-addon2">
 <br />
 
   <span id="sizing-addon1">Password</span>
-  <input type="password" id="pass"  name="pass" class="form-control" placeholder="*********" aria-describedby="sizing-addon2">
+  <input type="password" id="pass"  name="pass" class="form-control input-lg" placeholder="*********" aria-describedby="sizing-addon2">
 
 <div class="right">
 <label>Remember Me</label>
@@ -88,9 +88,6 @@ $Login = $Login_Process->log_in($_POST['user'], $_POST['pass'], $_POST['remember
 <br />
 <br />
 
-<?php
- Echo "<h3><a href=http://www.sdguardians.com/>Copyright 2011.The Guardianship Program, Inc. All Rights Reserved.</a></h3>"
-?>
 </div> <!--end of center align -->
 </div>
 </div>
@@ -105,6 +102,12 @@ include_once 'include/processes.php';
 $Login_Process = new Login_Process;
 $New = $Login_Process->Register($_POST, $_POST['process']);
 ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style type="text/css">
 .container-fluid {
 	margin-left: 0;
@@ -113,18 +116,30 @@ $New = $Login_Process->Register($_POST, $_POST['process']);
 h1 center {
 	background-color: white;
 }
+element.style {
+}
+.bge {
+width: 100%;
+padding: 5%;
+}
+form {
+border-radius: 4%;
+}
+form {
+border: white;
+}
 </style>
 
 <head>
-<h1 class="center">Register</h1>
+<h1 class="center" style="margin-bottom: 0px;">Register</h1>
 </head>
 
-<body>
-<div class="jumbotron">
 
-<div class="container-fluid">
-<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="bge">
-
+<body style="margin-bottom: 0px; margin-top: 0px;">
+<div class="jumbotron" style="background-color: #ebeff0;">
+<div class="container-fluid" style="background-color: #ebeff0;">
+	
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="bge" style="background-color: #ebeff0;">
 <div class="red">
 <?php  echo $New; ?>
 </div>
@@ -134,48 +149,48 @@ h1 center {
 <br />
 <div align="center">
 	<label>First Name</label>	
-	<input name="first_name" type="text" class="form-control" style="width: 70%;" value="<? echo $_POST['first_name']; ?>" />
-</div>
+	<input name="first_name" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['first_name']; ?>" />
+
 <br />
 <div align="center">
 	<label>Last Name</label>
-	<input name="last_name" type="text" class="form-control" style="width: 70%;" value="<? echo $_POST['last_name']; ?>" />
+	<input name="last_name" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['last_name']; ?>" />
 </div>
 <br />
 <div align="center">      
   <label>Email Address</label>
-	<input name="email_address" type="email" class="form-control" style="width: 70%;" value="<? echo $_POST['email_address']; ?>"/>
+	<input name="email_address" type="email" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['email_address']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label>Birthdate</label>
     <br />
-	<input name="birthdate" type="date" class="form-control" style="width: 70%; text-align: center;" value="<? echo $_POST['birthdate']; ?>"/>
+	<input name="birthdate" type="date" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['birthdate']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label>Zip Code</label>
-	<input name="zipcode" type="number" class="form-control" style="width: 70%;" value="<? echo $_POST['zipcode']; ?>"/>
+	<input name="zipcode" type="number" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['zipcode']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label>Username</label>
-	<input name="username" type="text" class="form-control" style="width: 70%;" value="<? echo $_POST['username']; ?>"/>
+	<input name="username" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['username']; ?>"/>
 </div>
 <br />
 <div align="center">
 	<label>Password</label>
-	<input name="pass1" type="password" class="form-control" style="width: 70%;" value="<? echo $_POST['pass1']; ?>"/>
+	<input name="pass1" type="password" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['pass1']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label>Confirm password</label>
-	<input name="pass2" type="password" class="form-control" style="width: 70%;" value="<? echo $_POST['pass2']; ?>"/>
-<br />
+	<input name="pass2" type="password" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['pass2']; ?>"/>
+</div>
 <br />
 <div align="center">
     <label>Code</label>
-	<input name="code" type="text" class="form-control" style="width: 70%;" value="<? echo $_POST['code']; ?>"/>
+	<input name="code" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['code']; ?>"/>
 </div>
 
 <br />
@@ -210,5 +225,18 @@ h1 center {
 </div>
 </form>
 </form>
-</div>  <!-- jumbotron -->
+</div>
+</div>  <!-- container -->
+
+<br />
+
+<div class="container text-center" style="width: 85%;">
+<div class="well" style="margin-bottom: 0px; margin-top: 0px; text-align: center; padding: 0px;">
+<?php
+ Echo "<h4><a href=http://www.sdguardians.com/>Copyright 2011.The Guardianship Program, Inc. All Rights Reserved.</a></h4>"
+?>
+</div>
+</div>
+</div> 	<!-- jumbotron -->
 </body>
+</html>

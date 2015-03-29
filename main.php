@@ -13,8 +13,8 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 <link href="include/style.css" rel="stylesheet" type="text/css">
 
 <head>
-<nav class="navbar navbar-inverse">
-  <p style="color:white; font-size:260%;">THE SOUTH DAKOTA GUARDIANSHIP</p>
+<nav class="navbar navbar-inverse" style="background-color:#60e4a2; margin-bottom: 0px; border-color:#60e4a2;">
+  <p style="color:white; background-color:#60e4a2; font-size:260%;">THE SOUTH DAKOTA GUARDIANSHIP</p>
 </nav>
 </head>
 
@@ -23,14 +23,14 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 <form class="bg">
 
 <div>
-<img src="sdgMain.gif" class="pic"/>
+<img src="sdgMainm.gif" class="pic"/>
 	<div class="signOutbtn">
-		<a href="include/processes.php?log_out=true" class="btn btn-xlarge btn-primary">Log out</a>
+		<a href="include/processes.php?log_out=true" class="btn btn-xlarge btn-primary" style="padding: 15px 30px;">Log out</a>
 	</div>
 </div>
 
 <div class="page-header">
-<h1>Welcome <? echo $_SESSION['first_name']; ?></h1>
+<div class="welcome" style="font-family: oswald; width: 100%; text-align: center;">Welcome <? echo $_SESSION['first_name']; ?></div>
 <div class="red"><?php echo $_GET['alert']; ?></div>
 <nav role="navigation">
  <ul class="nav nav-pills nav-justified nav-stacked">
@@ -45,7 +45,7 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
   <div class="row">
 	<!-- Button trigger modal -->
 	<?php
-	if ($_SESSION['user_level'] == 4) {
+	if ($_SESSION['user_level'] >= 4) {
 		echo '<button type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#myModal"><h1 style=margin-top: 0px;">My Pass</h1></button>';
 	}
 ?>
@@ -71,41 +71,21 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 
 <h4>Select your card</h4>
 <div class="well">
-
-	<table class="catalog" cellpadding="8" cellspacing="8" >
-		<tr>	
-		<td class="product" style="text-align:center; height: 319px;">
-		Gold Pak<br />
-		<strong>Price: $100.00</strong><br />
-		<img src="Site/images/golf3.jpg" width="154" height="151" alt="gold card" />
-		<p>Description: Four Golf Cards</p>
-
-<div class="paypalbtn">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="sdguardians@gmail.com">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="item_name" value="Gold Card">
-<input type="hidden" name="amount" value="100.00">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="B7QNBJH37LWJN">
+<table>
+<tr><td><input type="hidden" name="on0" value="Golf Pass Options">Golf Pass Options</td></tr><tr><td><select name="os0">
+	<option value="One Pass(1)">One Pass(1) $30.00 USD</option>
+	<option value="Two Passes(2)">Two Passes(2) $60.00 USD</option>
+	<option value="Gold Pass(4)">Gold Pass(4) $100.00 USD</option>
+</select> </td></tr>
+</table>
 <input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="button_subtype" value="services">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="shipping" value="0.00">
-<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
-</div>
 
- </td>
-</tr>
-</table>
-
-<hr style="height: -12px" />
-<p>&nbsp;</p>
-
-<!-- #EndEditable -->
-</div>
 </div> <!-- well end -->
 </div> <!-- container end -->
 
