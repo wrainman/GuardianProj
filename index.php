@@ -1,8 +1,8 @@
 <?php
 include_once 'include/processes.php';
 $Login_Process = new Login_Process;
-$Login_Process->check_login($_GET['page']);
-$Login = $Login_Process->log_in($_POST['user'], $_POST['pass'], $_POST['remember'], $_POST['page'], $_POST['submit']); 
+$Login_Process -> check_login($_GET['page']);
+$Login = $Login_Process -> log_in($_POST['user'], $_POST['pass'], $_POST['remember'], $_POST['page'], $_POST['submit']);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -20,22 +20,27 @@ $Login = $Login_Process->log_in($_POST['user'], $_POST['pass'], $_POST['remember
 <head>
 	
 <style type="text/css">
-   body { background: white; }
-   h1, .h1 {
-   font-size: 635%;
-   margin-top: 5%;
-   font-family: 'Oswald', sans-serif;
-   color: #ffa500;}
-   .jumbotron, .jumbotron h1, .jumbotron .h1 {
-   background-color: #60e4a2;
-   width: 100%;
-   padding: 1%;
-   margin-top: 0%;
-   font-size: 200%;
-   color: black;
-   margin-bottom: -5px;}
-   .form-control {
-   width:75% } 
+	body {
+		background: white;
+	}
+	h1, .h1 {
+		font-size: 635%;
+		margin-top: 5%;
+		font-family: 'Oswald', sans-serif;
+		color: #ffa500;
+	}
+	.jumbotron, .jumbotron h1, .jumbotron .h1 {
+		background-color: #60e4a2;
+		width: 100%;
+		padding: 1%;
+		margin-top: 0%;
+		font-size: 200%;
+		color: #2e2e2e;
+		margin-bottom: -5px;
+	}
+	.form-control {
+		width: 75%
+	}
 </style>
 
 <div class="jumbotron" style="box-shadow: 0 8px 40px #e5e5e5;">
@@ -100,7 +105,7 @@ $Login = $Login_Process->log_in($_POST['user'], $_POST['pass'], $_POST['remember
 <?
 include_once 'include/processes.php';
 $Login_Process = new Login_Process;
-$New = $Login_Process->Register($_POST, $_POST['process']);
+$New = $Login_Process -> Register($_POST, $_POST['process']);
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -109,34 +114,32 @@ $New = $Login_Process->Register($_POST, $_POST['process']);
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style type="text/css">
-.container-fluid {
-	margin-left: 0;
-	width: 100%;
-}
-h1 center {
-	background-color: white;
-}
-element.style {
-}
-.bge {
-width: 100%;
-padding: 5%;
-}
-form {
-border-radius: 4%;
-}
-form {
-border: white;
-}
+	.container-fluid {
+		margin-left: 0;
+		width: 100%;
+	}
+	h1 center {
+		background-color: white;
+	}
+	element.style {
+	}
+	.bge {
+		width: 100%;
+		padding: 5%;
+	}
+	form {
+		border-radius: 4%;
+		border: white;
+	}
+	label {
+		font-size: 120%;
+	}
 </style>
 
-<head>
-<h1 class="center" style="margin-bottom: 0px;">Register</h1>
-</head>
-
-
 <body style="margin-bottom: 0px; margin-top: 0px;">
-<div class="jumbotron" style="background-color: #ebeff0;">
+<div class="jumbotron" style="background-color: #ebeff0; color: #2491EA; box-shadow: 0 80px 100px #e5e5e5;">
+
+<h2 class="center" style="margin-bottom: 0px; background-color: #ebeff0;">Register</h2>
 <div class="container-fluid" style="background-color: #ebeff0;">
 	
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="bge" style="background-color: #ebeff0;">
@@ -145,7 +148,7 @@ border: white;
 </div>
 
 <!--<a name="add" id="add"></a>-->
-<form action="<?php echo $_SERVER['PHP_SELF']."#add"; ?>" method="post"  margin-top:0px;">
+<form action="<?php echo $_SERVER['PHP_SELF'] . "#add"; ?>" method="post"  margin-top:0px;">
 <br />
 <div align="center">
 	<label>First Name</label>	
@@ -158,14 +161,14 @@ border: white;
 </div>
 <br />
 <div align="center">      
-  <label>Email Address</label>
+  	<label>Email Address</label>
 	<input name="email_address" type="email" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['email_address']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label>Birthdate</label>
     <br />
-	<input name="birthdate" type="date" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['birthdate']; ?>"/>
+	<input name="birthdate" type="date" class="form-control input-lg" style="width: 70%; font-size: 130%;" value="<? echo $_POST['birthdate']; ?>"/>
 </div>
 <br />
 <div align="center">

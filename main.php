@@ -55,7 +55,6 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 
 
 <div class="container-fluid">
-
 <div class="box4">
 <!-- #BeginEditable "body1" -->
 				
@@ -91,7 +90,6 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 
 
 
-
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -103,21 +101,40 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
       <div class="modal-body">
 		<div class="container-fluid">
 	   	<p>
+	   	<form action="passconfirmation.php" id="passForm" method="post">
 		 <div class="field" style="font-size:80%;"><? echo $_SESSION['username']; ?></div>
 	
 		 <div class="field" style="font-size:80%;"><? echo $_SESSION['email_address']; ?></div>
 		
- 		 <div class="field" style="font-size:80%;"><? echo $_SESSION['first_name']; ?> <? echo $_SESSION['last_name']; ?>
-	</p>
-	</div>
-		<div class="field" style="font-size:80%;"><? echo $_SESSION['info']; ?></div>
-      </div>
+ 		 <div class="field" style="font-size:80%;"><? echo $_SESSION['first_name']; ?> <? echo $_SESSION['last_name']; ?></div>
+
+     	 <div class="field" style="font-size:80%;"><? echo $_SESSION['code']; ?> <? echo $_SESSION['userid']; ?></div>
+     	   	 
+     	 <select name='cselected' id='cselected' style="width: 100%;font-size: 130%;">
+		 <?php
+		$query1 = $db -> prepare("
+			select * from (SELECT userName, userid FROM users WHERE userid = '$userid') as a
+    		join (SELECT courseId, courseName FROM golfcourses) as b
+    		left outer join (SELECT * FROM coursesplayed) as c ON c.courseId = b.courseId AND c.userid = a.userid
+    		");
+		$query1 -> execute();
+
+		while ($r = $query1 -> fetch(PDO::FETCH_ASSOC)) {
+			echo "<option value='" . $r['first_name'] . "'>" . $r['courseName'] . "</option>";
+		}
+	?>
+		 </select>
+     	 
+     	 <button id="passSub" type="submit"> Select this course </button>
+      	</form>
+      	</p>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <a href="passconfirmation.php"><button type="button" class="btn btn-primary">NEXT</button></a>
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>
 <!-- Modal END -->
@@ -128,10 +145,13 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 
 <?php
 if ($_SESSION['user_level'] == 5) {
-	echo '<div><a href="admin/admin_center.php">Admin Centers</a></div>'; }?>
+	echo '<div><a href="admin/admin_center.php">Admin Centers</a></div>';
+}
+?>
 		 </div>
-	  </form>
 	</div>
+   </form>
+   </div>
   </body>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">

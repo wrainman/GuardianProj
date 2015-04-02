@@ -25,25 +25,25 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
       <table class="table">
         <thead>
           <tr>
-            <th><? echo $_SESSION['username']; ?></th>
+            <th><h3><? echo $_SESSION['username']; ?></h3></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-          	<td>Email Address: </td>
-            <td><? echo $_SESSION['email_address']; ?></td>
+          	<td><h3>Email Address: </h3></td>
+            <td><h3><? echo $_SESSION['email_address']; ?></h3></td>
           </tr>
           <tr>
-          	<td>First Name: </td>
-            <td><? echo $_SESSION['first_name']; ?></td>
+          	<td><h3>First Name: </h3></td>
+            <td><h3><? echo $_SESSION['first_name']; ?></h3></td>
           </tr>
           <tr>
-          	<td>Last Name: </td>
-            <td> <? echo $_SESSION['last_name']; ?></td>
+          	<td><h3>Last Name: </h3></td>
+            <td><h3><? echo $_SESSION['last_name']; ?></h3></td>
           </tr>
           <tr>
-          	<td>Codes Entered*mabey*: </td>
-            <td><? echo $_SESSION['info']; ?></td>
+          	<td><h3>Codes Entered*mabey*: </h3></td>
+            <td><h3><? echo $_SESSION['info']; ?></h3></td>
           </tr>        
         </tbody>
       </table>
@@ -52,8 +52,8 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 </div>
 <div>
 	<button onClick="window.print()">Print this page</button>
-	<? 
-	echo "\t";
+	<?
+		echo "\t";
 	?>
 	<a href="main.php">Home</a>
 </div>
