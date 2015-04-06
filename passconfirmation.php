@@ -2,6 +2,7 @@
 include_once 'include/processes.php';
 $Login_Process = new Login_Process;
 $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
+$courseSel = $_POST['cselected']
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -44,7 +45,11 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
           <tr>
           	<td><h3>Codes Entered*mabey*: </h3></td>
             <td><h3><? echo $_SESSION['info']; ?></h3></td>
-          </tr>        
+          </tr>     
+          <tr>
+          	<td><h3>Course: </h3></td>
+            <td><h3><? echo $courseSel; ?></h3></td>
+          </tr>   
         </tbody>
       </table>
       </div>
@@ -53,16 +58,15 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 <div>
 	<button onClick="window.print()">Print this page</button>
 	<?
-		echo "\t";
+	echo "\t";
 	?>
 	<a href="main.php">Home</a>
 </div>
 </body>
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 </html>

@@ -89,7 +89,6 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 </div> <!-- container end -->
 
 
-
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -101,7 +100,9 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
       <div class="modal-body">
 		<div class="container-fluid">
 	   	<p>
-	   	<form action="passconfirmation.php" id="passForm" method="post">
+  			   		
+	   	<form method="post" action="passconfirmation.php" onsubmit="courseSelection()" >
+	   		
 		 <div class="field" style="font-size:80%;"><? echo $_SESSION['username']; ?></div>
 	
 		 <div class="field" style="font-size:80%;"><? echo $_SESSION['email_address']; ?></div>
@@ -110,27 +111,44 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 
      	 <div class="field" style="font-size:80%;"><? echo $_SESSION['code']; ?> <? echo $_SESSION['userid']; ?></div>
      	   	 
-     	 <select name='cselected' id='cselected' style="width: 100%;font-size: 130%;">
+     	 <select name="cselected" id="cselected" style="width: 100%;font-size: 130%;">
 		 <?php
-		$query1 = $db -> prepare("
+		 $userid = $_SESSION['userid'];
+		 $query1 = $db -> prepare("
 			select * from (SELECT userName, userid FROM users WHERE userid = '$userid') as a
     		join (SELECT courseId, courseName FROM golfcourses) as b
     		left outer join (SELECT * FROM coursesplayed) as c ON c.courseId = b.courseId AND c.userid = a.userid
-    		");
-		$query1 -> execute();
+    		WHERE c.userid IS NULL
+    		ORDER BY b.courseId");
+		 $query1 -> execute();
 
-		while ($r = $query1 -> fetch(PDO::FETCH_ASSOC)) {
+		 while ($r = $query1 -> fetch(PDO::FETCH_ASSOC)) {
 			echo "<option value='" . $r['first_name'] . "'>" . $r['courseName'] . "</option>";
-		}
-	?>
-		 </select>
-     	 
-     	 <button id="passSub" type="submit"> Select this course </button>
-      	</form>
+		 }
+		 ?>
+		 </select> 
+     	 <button id="submit" type="submit" class="btn-lg"> Select this course </button> 
+     	 </form> 
+     	     	 
+		<script>
+			function courseSelection() {
+				var x = document.getElementById("cselected").selectedIndex;
+				var y = document.getElementById("cselected").options;
+				var course = y[x].text;
+				//alert(course);
+				var data = {
+					cselected : course
+				}
+				$.post('passconfirmation.php', data, function(returnData) {
+					document.write(returnData);
+				});
+			}
+			</script>	
+      	
       	</p>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <a href="passconfirmation.php"><button type="button" class="btn btn-primary">NEXT</button></a>
+       <!-- <a href="passconfirmation.php"><button type="button" class="btn btn-primary">NEXT</button></a> -->
       </div>
     </div>
   </div>
@@ -148,16 +166,16 @@ if ($_SESSION['user_level'] == 5) {
 	echo '<div><a href="admin/admin_center.php">Admin Centers</a></div>';
 }
 ?>
-		 </div>
-	</div>
-   </form>
-   </div>
-  </body>
+		</div>
+	  </div>
+    </form>
+  </div>
+</body>
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 </html>
