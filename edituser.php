@@ -12,12 +12,17 @@ $Edit = $Login_Process->edit_details($_POST, $_POST['process']);
 
 <title>Edit user information</title>
 
+<head>
+<nav class="navbar navbar-inverse" style="background-color:#60e4a2; margin-bottom: 0px; border-color:#60e4a2;">
+  <p style="color:white; background-color:#60e4a2; font-size:260%;">THE SOUTH DAKOTA GUARDIANSHIP</p>
+</nav>
+</head>
 
 <style>
 @media screen and (min-width: 381px) {
   .label{
- 	font-size: 170% !important;
-  }
+ 	font-size: 150% !important;
+ }
  a{
  	font-size: 275%;
  }
@@ -27,9 +32,6 @@ $Edit = $Login_Process->edit_details($_POST, $_POST['process']);
  h1{
   font-size: 350% !important;
  }
-   .panel-title {
-  font-size: 75% !important;
- }
  .pic {
  	height: 19%;
  	width: 19%;
@@ -37,7 +39,7 @@ $Edit = $Login_Process->edit_details($_POST, $_POST['process']);
 }
 @media screen and (max-width: 380px) {
   .label{
- 	font-size: 165% !important;
+ 	font-size: 150% !important;
  }
  a{
  	font-size: 270%;
@@ -48,9 +50,6 @@ $Edit = $Login_Process->edit_details($_POST, $_POST['process']);
  h1{
   font-size: 350% !important;
  }
-   .panel-title {
-  font-size: 75% !important;
- }
  .pic {
  	height: 21%;
  	width: 21%;
@@ -58,7 +57,7 @@ $Edit = $Login_Process->edit_details($_POST, $_POST['process']);
 }
 @media screen and (max-width: 358px) {
   .label{
- 	font-size: 160% !important;
+ 	font-size: 150% !important;
  }
  a{
  	font-size: 265%;
@@ -69,9 +68,6 @@ $Edit = $Login_Process->edit_details($_POST, $_POST['process']);
   h1{
   font-size: 325% !important;
  }
-   .panel-title {
-  font-size: 75% !important;
- }
  .pic {
  	height: 25%;
  	width: 25%;
@@ -79,7 +75,7 @@ $Edit = $Login_Process->edit_details($_POST, $_POST['process']);
 }
 @media screen and (max-width: 340px) {
   .label{
- 	font-size: 155% !important;
+ 	font-size: 150% !important;
  }
  a{
  	font-size: 265%;
@@ -89,9 +85,6 @@ $Edit = $Login_Process->edit_details($_POST, $_POST['process']);
  }
   h1{
   font-size: 300% !important;
- }
-   .panel-title {
-  font-size: 75% !important
  }
  .pic {
  	height: 27%;
@@ -109,10 +102,7 @@ $Edit = $Login_Process->edit_details($_POST, $_POST['process']);
    font-size: 130% !important;
  }
   h1{
-  font-size: 275% !important;
- }
-   .panel-title {
-  font-size: 75% !important;
+  font-size: 200% !important;
  }
  .pic {
  	height: 29%;
@@ -126,37 +116,33 @@ $Edit = $Login_Process->edit_details($_POST, $_POST['process']);
 </style>
 
 
-<body>
 
+<body>
 <div class="container-fluid">
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
 <div class="right" style="margin-top:-8px; margin-right:-6px;"><a href="main.php">Home</a></div>
 <h1>Edit Account Details</h1>
+<br />
+
 <div class="red"><?php echo $Edit; ?></div>
 
-<div class="label" style="text-align: left; color: black; font-weight: 400; line-height: .7;"><div class="panel panel-default" style="margin-bottom: 0px;">
-  <div class="panel-heading">
-    <div class="panel-title">First Name: </div>
-  </div>
+
+<div class="label" style="text-align: left; color: black;">First Name: </div>
 <input name="first_name" type="text" class="form-control input-lg" value="<? echo $_SESSION['first_name']; ?>" />
-</div>
+<br />
+<br />
 
-<div class="label" style="text-align: left; color: black; font-weight: 400; line-height: .7;"><div class="panel panel-default" style="margin-bottom: 0px;">
-  <div class="panel-heading">
-    <div class="panel-title">Last Name: </div>
-  </div>
+<div class="label" style="text-align: left; color: black;">Last Name: </div>
 <input name="last_name" type="text" class="form-control input-lg" value="<? echo $_SESSION['last_name']; ?>" />
- </div>
+<br />
+<br />
 
-<div class="label" style="text-align: left; color: black; font-weight: 400; line-height: .7;"><div class="panel panel-default" style="margin-bottom: 0px;">
-  <div class="panel-heading"> 
-    <div class="panel-title">Email Address: </div>
-  </div>
-<input name="email_address" type="text" class="form-control input-lg" value="<? echo $_SESSION['email_address']; ?>" />
- </div>
+<div class="label" style="text-align: left; color: black;">Email Address: </div>
+<input name="email_address" type="text" class="form-control input-lg" value="<? echo $_SESSION['email_address']; ?>"  />
  
- 
+
+
 <br />
 <div class="right">
 <input name="username" type="hidden" id="username" value="<? echo $_SESSION['username']; ?>" />

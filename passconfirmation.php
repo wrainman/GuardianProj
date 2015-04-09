@@ -2,7 +2,18 @@
 include_once 'include/processes.php';
 $Login_Process = new Login_Process;
 $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
-$courseSel = $_POST['cselected']
+
+$courseSel = $_POST['cselected'];
+$userid = $_SESSION['userid'];
+	
+
+	$course_id = $db -> prepare("SELECT courseId FROM `golfcourses` WHERE courseName= ?");
+	$course_id -> execute(array($courseSel));
+	$id = $course_id -> fetchColumn();
+
+	$query1 = $db -> prepare("INSERT INTO `coursesplayed`(`courseId`, `userid`) VALUES(:courseId, :userid)");
+	$query1 -> execute(array(':courseId' => $id, ':userid' => $userid));
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -44,7 +55,7 @@ $courseSel = $_POST['cselected']
           </tr>
           <tr>
           	<td><h3>Codes Entered*mabey*: </h3></td>
-            <td><h3><? echo $_SESSION['info']; ?></h3></td>
+            <td><h3><? echo $_SESSION['code']; ?></h3></td>
           </tr>     
           <tr>
           	<td><h3>Course: </h3></td>
@@ -62,6 +73,12 @@ $courseSel = $_POST['cselected']
 	?>
 	<a href="main.php">Home</a>
 </div>
+<div>
+	<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+	     	 <input name="submit" type="submit" class="btn-lg"> IM SURE </input> 
+	</form>
+</div>
+
 </body>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -70,3 +87,5 @@ $courseSel = $_POST['cselected']
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 </html>
+
+

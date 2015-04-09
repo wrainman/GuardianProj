@@ -34,9 +34,10 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 <div class="red"><?php echo $_GET['alert']; ?></div>
 <nav role="navigation">
  <ul class="nav nav-pills nav-justified nav-stacked">
-  <li class="large" role="presentation"><a href="#">Course Information</a></li>
+  <li class="large" role="presentation"><a href="courseinfo.php">Course Information</a></li>
   <li role="presentation"><a href="edituser.php">My Information</a></li>
-  <li role="presentation"><a href="#">About SD Guardians</a></li>
+  <li role="presentation"><a href="index.php">About SD Guardians</a></li>
+  <li role="presentation"><a href="editpassword.php">My Password</a></li>
  </ul>
 </nav>
 </div>
@@ -136,11 +137,13 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 				var y = document.getElementById("cselected").options;
 				var course = y[x].text;
 				//alert(course);
-				var data = {
+				var data = {     
 					cselected : course
 				}
 				$.post('passconfirmation.php', data, function(returnData) {
 					document.write(returnData);
+					//document.getElementById("sel").innerHTML(returnData);
+					document.close();
 				});
 			}
 			</script>	

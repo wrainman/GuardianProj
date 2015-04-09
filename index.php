@@ -89,7 +89,7 @@ $Login = $Login_Process -> log_in($_POST['user'], $_POST['pass'], $_POST['rememb
 
 <br />
 <div class="center">
-<a href="forgotpassword.php"><strong>Password Recovery</strong></a> | <a href="register.php"><strong>Sign Up</strong></a>
+<a href="forgotpassword.php"><strong>Password Recovery</strong></a> | <a href="#reg"><strong>Sign Up</strong></a>
 </div>  <!--container-fluid end -->
 <br />
 <br />
@@ -138,6 +138,9 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 </style>
 
 <body style="margin-bottom: 0px; margin-top: 0px;">
+	
+<a name="reg"><a>
+	
 <div class="jumbotron" style="background-color: #ebeff0; color: #2491EA; box-shadow: 0 80px 100px #e5e5e5;">
 
 <h2 class="center" style="margin-bottom: 0px; background-color: #ebeff0;">Register</h2>
