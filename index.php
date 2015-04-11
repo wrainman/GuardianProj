@@ -177,6 +177,11 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 <br />
 <div align="center">
     <label>Zip Code</label>
+	<input name="city" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['city']; ?>"/>
+</div>
+<br />
+<div align="center">
+    <label>Zip Code</label>
 	<input name="zipcode" type="number" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['zipcode']; ?>"/>
 </div>
 <br />
@@ -203,7 +208,7 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 <br />
 <br />
 <div class="form-actions">
-<input name="process" class="btn btn-large btn-info" type="submit" id="process" value="Add User" />
+<input name="process" style="font-size: 100%;" class="btn btn-large btn-info" type="submit" id="process" value="Add User" />
 
 <!-- Button trigger modal -->
 <button type="button" class="btn" data-toggle="modal" data-target="#myModal">

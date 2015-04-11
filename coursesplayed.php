@@ -122,19 +122,13 @@ $Login_Process->check_status($_SERVER['SCRIPT_NAME']);
 <h1>Course Information</h1>
 <br />
 
-<div class="col-md-4 text-center"> 
-<button type="button" class="btn btn-info btn-lg" style="">
-  <span style="font-size: 170%;" class="glyphicon glyphicon-transfer" aria-hidden="true"></span> Slide over
-</button>
-</div>
-<br />
 
 <div class="table-responsive">
 <table id="myTable" class="table table-striped table-condensed">
     <thead>
       <tr>
 	<th width="3%" align="left">Course </th>
-	<th width="10%" align="left"> Info </th>
+	<th width="10%" align="left"><strong> Timestamp </strong></th>
 	<th width="3%" align="left"> Location </th>
 	<th width="10%" align="left"> Address </th>
        	
@@ -147,7 +141,7 @@ $Login_Process->check_status($_SERVER['SCRIPT_NAME']);
 	$sql = "select * from (SELECT userName, userid FROM users WHERE userid = '$userid') as a
     		join (SELECT courseId, courseName, courseStipulations, courseLocation, courseAddress FROM golfcourses) as b
     		left outer join (SELECT * FROM coursesplayed) as c ON c.courseId = b.courseId AND c.userid = a.userid
-    		WHERE c.userid IS NULL
+    		WHERE c.userid IS NOT NULL
     		ORDER BY b.courseId"; 
 	$stmt = $db->prepare($sql);
 	$stmt->execute();
@@ -155,11 +149,11 @@ $Login_Process->check_status($_SERVER['SCRIPT_NAME']);
 	
 	foreach($results as $row) 
  {
-echo ' <tr class="success"> ';
+echo ' <tr class="danger"> ';
 echo ' <td> ';
 echo $row['courseName'];
 echo ' <td> ';
-echo $row['courseStipulations'];
+echo $row['timestamp'];
 echo ' <td> ';
 echo $row['courseLocation'];
 echo ' <td> ';
@@ -183,3 +177,4 @@ echo $row['courseAddress'];
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
