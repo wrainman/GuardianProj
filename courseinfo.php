@@ -13,7 +13,7 @@ $Login_Process->check_status($_SERVER['SCRIPT_NAME']);
 
 <head>
 <nav class="navbar navbar-inverse" style="background-color:#60e4a2; margin-bottom: 0px; border-color:#60e4a2;">
-  <p style="color:white; background-color:#60e4a2; font-size:260%;">THE SOUTH DAKOTA GUARDIANSHIP</p>
+  <p style="color:white; background-color:#60e4a2; font-size:260%; padding-left: 1%;"><strong>THE SOUTH DAKOTA GUARDIANSHIP</strong></p>
 </nav>
 </head>
 
@@ -122,21 +122,21 @@ $Login_Process->check_status($_SERVER['SCRIPT_NAME']);
 <h1>Course Information</h1>
 <br />
 
-<div class="col-md-4 text-center"> 
-<button type="button" class="btn btn-info btn-lg" style="">
-  <span style="font-size: 170%;" class="glyphicon glyphicon-transfer" aria-hidden="true"></span> Slide over
-</button>
-</div>
-<br />
 
 <div class="table-responsive">
 <table id="myTable" class="table table-striped table-condensed">
     <thead>
+    <div class="col-md-4 text-center"> 
+  <span style="font-size: 110%;" class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+  <span style="font-size: 110%;" class="glyphicon glyphicon-arrow-right" aria-hidden="true">&nbspScroll over&nbsp</span>
+  <span style="font-size: 110%;" class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+  <span style="font-size: 110%;" class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+</div>
       <tr>
-	<th width="3%" align="left">Course </th>
-	<th width="10%" align="left"> Info </th>
-	<th width="3%" align="left"> Location </th>
-	<th width="10%" align="left"> Address </th>
+	<th>Course </th>
+	<th> Info </th>
+	<th> Location </th>
+	<th> Address </th>
        	
      </tr>
     </thead>

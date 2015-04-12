@@ -14,7 +14,7 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 
 <head>
 <nav class="navbar navbar-inverse" style="background-color:#60e4a2; margin-bottom: 0px; border-color:#60e4a2;">
-  <p style="color:white; background-color:#60e4a2; font-size:260%;">THE SOUTH DAKOTA GUARDIANSHIP</p>
+  <p style="color:white; background-color:#60e4a2; font-size:260%; padding-left: 1%;"><strong>THE SOUTH DAKOTA GUARDIANSHIP</strong></p>
 </nav>
 </head>
 
@@ -54,7 +54,6 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 </div>
 
 <div class="container-fluid">
-<div class="box4">
 <!-- #BeginEditable "body1" -->
 				
 <h3>Golf Cards</h3>
@@ -74,87 +73,69 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 <p>If you would like to make a donation to <strong>The Guardianship Program</strong>, you can
 click on the DONATE button.</p>
 
-<table class="catalog" cellpadding="8" cellspacing="8" >
-<tr>
-<td class="product" style="text-align:center; width: 35%; height: 319px;"><br />
-		
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="business" value="sdguardians@gmail.com">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="item_name" value="Golf Card">
-<input type="hidden" name="button_subtype" value="products">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="tax_rate" value="0.000">
-<input type="hidden" name="shipping" value="0.00">
-<input type="hidden" name="add" value="1">
-<input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
 
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="option_select0" value="One Card">
-<input type="hidden" name="option_amount0" value="30.00">
-<input type="hidden" name="option_select1" value="Two Cards">
-<input type="hidden" name="option_amount1" value="60.00">
-<input type="hidden" name="option_select2" value="Three Cards">
-<input type="hidden" name="option_amount2" value="90.00">
-<input type="hidden" name="option_index" value="0">
+<?php
+	if ($_SESSION['user_level'] < 4) {
 
-<br />
-</form>
-</div>
-</td>
-								
-<td class="product" style="text-align:center; height: 319px;">Gold Pak<br />
-<strong>Price: $10.00</strong><br />
-<img src="gb.jpg" width="154" height="151" alt="gold card" />
-<p>Description: Golf Pass</p>
+echo '<div class="table-responsive">';
+echo '<table class="table">';
+echo '<tr>';
+echo '<td>';
+echo '</form>';
+echo '<td class="product" style="text-align:center; height: 319px;">Gold Pak<br />';
+echo '<strong>Price: $30.00</strong><br />';
+echo '<img src="gb.jpg" width="154" height="151" alt="gold card" />';
+echo '<p>Description: Golf Pass</p>';
 
-<div class="paypalbtn">
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="sdguardians@gmail.com">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="item_name" value="Gold Card">
-<input type="hidden" name="amount" value="10.00">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="button_subtype" value="services">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="shipping" value="0.00">
-<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-</div>
-</td>
+echo '<div class="paypalbtn">';
+echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="background-color: grey;">';
+echo '<input type="hidden" name="cmd" value="_xclick">';
+echo '<input type="hidden" name="business" value="sdguardians@gmail.com">';
+echo '<input type="hidden" name="lc" value="US">';
+echo '<input type="hidden" name="item_name" value="Gold Card">';
+echo '<input type="hidden" name="amount" value="30.00">';
+echo '<input type="hidden" name="currency_code" value="USD">';
+echo '<input type="hidden" name="button_subtype" value="services">';
+echo '<input type="hidden" name="no_note" value="0">';
+echo '<input type="hidden" name="shipping" value="0.00">';
+echo '<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">';
+echo '<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">';
+echo '<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">';
+echo '</form>';
+echo '</div>';
+echo '</td>';
+echo '</td>';
 
-<td class="product" style="text-align:center; width:35%; height: 319px;"><br />
-		
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="business" value="sdguardians@gmail.com">
-<input type="hidden" name="lc" value="US">
-<input type="hidden" name="item_name" value="Golf Card">
-<input type="hidden" name="button_subtype" value="products">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="tax_rate" value="0.000">
-<input type="hidden" name="shipping" value="0.00">
-<input type="hidden" name="add" value="1">
-<input type="hidden" name="bn" value="PP-ShopCartBF:btn_cart_LG.gif:NonHostedGuest">
+echo '<td>';						
+echo '<td class="product" style="text-align:center; height: 319px;">Gold Pak<br />';
+echo '<strong>Price: $100.00</strong><br />';
+echo '<img src="gb.jpg" width="154" height="151" alt="gold card" />';
+echo '<p>Description: Golf Pass</p>';
 
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="option_select0" value="One Card">
-<input type="hidden" name="option_amount0" value="30.00">
-<input type="hidden" name="option_select1" value="Two Cards">
-<input type="hidden" name="option_amount1" value="60.00">
-<input type="hidden" name="option_select2" value="Three Cards">
-<input type="hidden" name="option_amount2" value="90.00">
-<input type="hidden" name="option_index" value="0">
+echo '<div class="paypalbtn">';
+echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="background-color: grey;">';
+echo '<input type="hidden" name="cmd" value="_xclick">';
+echo '<input type="hidden" name="business" value="sdguardians@gmail.com">';
+echo '<input type="hidden" name="lc" value="US">';
+echo '<input type="hidden" name="item_name" value="Gold Card">';
+echo '<input type="hidden" name="amount" value="100.00">';
+echo '<input type="hidden" name="currency_code" value="USD">';
+echo '<input type="hidden" name="button_subtype" value="services">';
+echo '<input type="hidden" name="no_note" value="0">';
+echo '<input type="hidden" name="shipping" value="0.00">';
+echo '<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">';
+echo '<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">';
+echo '<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">';
+echo '</form>';
+echo '</div>';
+echo '</td>';
+echo '</td>';
 
-<br />
-</form>
-</div>
-</td>
-
-</tr>
-</table>
+echo '</tr>';
+echo '</table>';
+echo '</div>';
+	}
+?>
 
 </div> <!-- well end -->
 </div> <!-- container end -->

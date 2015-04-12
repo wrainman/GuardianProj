@@ -13,7 +13,7 @@ $Login_Process->check_status($_SERVER['SCRIPT_NAME']);
 
 <head>
 <nav class="navbar navbar-inverse" style="background-color:#60e4a2; margin-bottom: 0px; border-color:#60e4a2;">
-  <p style="color:white; background-color:#60e4a2; font-size:260%;">THE SOUTH DAKOTA GUARDIANSHIP</p>
+  <p style="color:white; background-color:#60e4a2; font-size:260%; padding-left: 1%;"><strong>THE SOUTH DAKOTA GUARDIANSHIP</strong></p>
 </nav>
 </head>
 
