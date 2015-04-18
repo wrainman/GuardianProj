@@ -176,7 +176,7 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 </div>
 <br />
 <div align="center">
-    <label>Zip Code</label>
+    <label>City</label>
 	<input name="city" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['city']; ?>"/>
 </div>
 <br />
