@@ -25,12 +25,12 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 <div>
 <img src="sdgMainm.gif" class="pic"/>
 	<div class="signOutbtn">
-		<a href="include/processes.php?log_out=true" class="btn btn-xlarge btn-primary" style="padding: 15px 30px;">Log out</a>
+		<a href="include/processes.php?log_out=true" class="btn btn-xlarge btn-primary" style="padding: 15px 30px; font-size: 85%;">Log out</a>
 	</div>
 </div>
 
 <div class="page-header">
-<div class="welcome" style="font-family: oswald; width: 100%; text-align: center;">Welcome <? echo $_SESSION['first_name']; ?></div>
+<div class="welcome" style="font-family: oswald; width: 100%; text-align: center; font-size: 230%;">Welcome <? echo $_SESSION['first_name']; ?></div>
 <div class="red"><?php echo $_GET['alert']; ?></div>
 <nav role="navigation">
  <ul class="nav nav-pills nav-justified nav-stacked">

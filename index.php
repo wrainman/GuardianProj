@@ -50,7 +50,7 @@ $Login = $Login_Process -> log_in($_POST['user'], $_POST['pass'], $_POST['rememb
 <img src="sdgMainr.gif" style="margin-top:0%; margin-botton: 0%; margin-left:1px;" alt="Smiley face" class="imgSDG" height="25%" width="25%">
 
 <tr>
-  <td><strong><h1>The South Dakota Guardianship Program, Inc.</h1></strong></td>
+  <td><h1>The South Dakota Guardianship Program, Inc.</h1></td>
 </tr>
 </div>
 </div>
@@ -143,7 +143,7 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 	
 <div class="jumbotron" style="background-color: #ebeff0; color: #2491EA; box-shadow: 0 80px 100px #e5e5e5;">
 
-<h2 class="center" style="margin-bottom: 0px; background-color: #ebeff0;">Register</h2>
+<h2 class="center" style="margin-bottom: 0px; background-color: #ebeff0; font-size: 225%;">Register</h2>
 <div class="container-fluid" style="background-color: #ebeff0;">
 	
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="bge" style="background-color: #ebeff0;">
@@ -201,8 +201,15 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 </div>
 <br />
 <div align="center">
-    <label>Code</label>
+    <label a href="#" data-toggle="tooltip" title="Enter your code here if possessed">Passcode</label><div class="glyphicon glyphicon-question-sign"></div>
 	<input name="code" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['code']; ?>"/>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
 </div>
 
 <br />
@@ -211,7 +218,7 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 <input name="process" style="font-size: 100%;" class="btn btn-large btn-info" type="submit" id="process" value="Add User" />
 
 <!-- Button trigger modal -->
-<button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+<button type="button" style="font-size: 100%;" class="btn btn-large" data-toggle="modal" data-target="#myModal">
   Terms
 </button>
 
@@ -242,12 +249,10 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 
 <br />
 
-<div class="container text-center" style="width: 85%;">
-<div class="well" style="margin-bottom: 0px; margin-top: 0px; text-align: center; padding: 0px;">
+<div style="margin-bottom: 0px; margin-top: 0px; text-align: center; padding: 0px;">
 <?php
  Echo "<h4><a href=http://www.sdguardians.com/>Copyright 2011.The Guardianship Program, Inc. All Rights Reserved.</a></h4>"
 ?>
-</div>
 </div>
 </div> 	<!-- jumbotron -->
 </body>
