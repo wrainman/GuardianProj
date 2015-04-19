@@ -47,7 +47,7 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 	<!-- Button trigger modal -->
 	<?php
 	if ($_SESSION['user_level'] >= 4) {
-		echo '<button type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#myModal"><h1 style=margin-top: 0px;">My Pass</h1></button>';
+		echo '<button type="button" class="btn btn-block btn-danger" data-toggle="modal" data-target="#myModal"><h1 style=margin-top: 0px;"><div class="glyphicon glyphicon-globe"></div>&nbsp My Pass</h1></button>';
 	}
 ?>
   </div>
@@ -170,7 +170,7 @@ echo '</div>';
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"> South Dakota Guardianship </h4>
+        <h2 class="modal-title" id="myModalLabel"><div class="text-warning"><strong> Golf for Guardianship User Pass <strong></h2>
       </div>
       <div class="modal-body">
 		<div class="container-fluid">
@@ -178,27 +178,23 @@ echo '</div>';
   			   		
 	   	<form method="post" action="passconfirmation.php" onsubmit="courseSelection()" >
 	   		
-	   	 
-	   	 <div class="jumbotron" style="font-size: 80%; margin-bottom: 0%;">
+	   	 <div class="jumbotron" style="font-size: 100%; margin-bottom: 0%;">
 	  
-	  	 <h2 style="margin-top: 0%;">My Pass</h2>	
+	  	 <h2 class="text-primary" style="margin-top: 0%;"><div class="glyphicon glyphicon-globe"></div>&nbsp My Pass</h2>	
 	  	
 	 <div class="table-responsive">	
 	   	<table class="table table-condensed"> 	
 	   	<tr>
-	   	 <td><div class="field" style="font-size:80%;"><? echo $_SESSION['birthdate']; ?></div></td>
-	   	 
-		 <td><div class="field" style="font-size:80%;"><? echo $_SESSION['zipcode']; ?></div></td>
+	   	 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['birthdate']; ?></div></td>
+		 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['zipcode']; ?></div></td>
 		</tr>
-		
 		<tr>
- 		 <td><div class="field" style="font-size:80%;"><? echo $_SESSION['first_name']; ?></td> 
- 		 <td><? echo $_SESSION['last_name']; ?></div></td>
-     	 </tr>
-     	 
-     	 <tr>	
-     	 <td><? echo $_SESSION['email_address']; ?></td>
-     	 <td><? echo $_SESSION['city']; ?></div></td>
+ 		 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['first_name']; ?></div></td> 
+ 		 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['last_name']; ?></div></td>
+     	</tr>
+        <tr>	
+     	 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['email_address']; ?></div></td>
+     	 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['city']; ?></div></td>
      	</tr>
      	</table>
      </div>
@@ -222,7 +218,7 @@ echo '</div>';
 		 
 		 <br>
 		 <br>
-     	 <button id="submit" type="submit" class="btn-lg"> Select this course </button> 
+     	 <button type="submit" class="btn-lg btn-block btn-success"><div class="glyphicon glyphicon-ok-circle"></div>&nbsp Play golf! </button> 
      	 </form> 
      	     	 
 		<script>
@@ -243,9 +239,8 @@ echo '</div>';
 			</script>	
       	
       	</p>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-       <!-- <a href="passconfirmation.php"><button type="button" class="btn btn-primary">NEXT</button></a> -->
+      <div class="modal-footer" style="margin-bottom: 0%;">
+        <button type="button" class="btn btn-default btn-info" data-dismiss="modal">Close</button>
       </div>
       </div>
     </div>

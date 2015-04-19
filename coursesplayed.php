@@ -142,7 +142,7 @@ $Login_Process->check_status($_SERVER['SCRIPT_NAME']);
     		join (SELECT courseId, courseName, courseStipulations, courseLocation, courseAddress FROM golfcourses) as b
     		left outer join (SELECT * FROM coursesplayed) as c ON c.courseId = b.courseId AND c.userid = a.userid
     		WHERE c.userid IS NOT NULL
-    		ORDER BY b.courseId"; 
+    		ORDER BY c.timestamp DESC"; 
 	$stmt = $db->prepare($sql);
 	$stmt->execute();
 	$results = $stmt->fetchAll();

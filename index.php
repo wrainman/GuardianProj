@@ -70,7 +70,7 @@ $Login = $Login_Process -> log_in($_POST['user'], $_POST['pass'], $_POST['rememb
 <?php echo $Login; ?></div>
 <br />
 
-  <span id="sizing-addon1">Username</span>
+  <span id="sizing-addon1"><div class="glyphicon glyphicon-user"></div>&nbsp Username</span>
   <input type="text" id="user" name="user" class="form-control input-lg" placeholder="Username" aria-describedby="sizing-addon2">
 <br />
 
@@ -142,8 +142,7 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 <a name="reg"><a>
 	
 <div class="jumbotron" style="background-color: #ebeff0; color: #2491EA; box-shadow: 0 80px 100px #e5e5e5;">
-
-<h2 class="center" style="margin-bottom: 0px; background-color: #ebeff0; font-size: 225%;">Register</h2>
+<h2 class="center" style="margin-bottom: 0px; background-color: #ebeff0; font-size: 225%;"><div class="text-success"><div class="glyphicon glyphicon-tree-deciduous"></div>&nbsp Register</h2></div>
 <div class="container-fluid" style="background-color: #ebeff0;">
 	
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="bge" style="background-color: #ebeff0;">

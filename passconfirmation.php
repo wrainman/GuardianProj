@@ -21,18 +21,27 @@ $userid = $_SESSION['userid'];
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>My Pass</title>
+<title>My Golfing Pass</title>
 <link href="include/style.css" rel="stylesheet" type="text/css">
 
-<body>
-<h1>
-	Welcome <? echo $_SESSION['username']; ?>, thanks for loging in to your pass
-</h1>
+<head>
+<nav class="navbar navbar-inverse" style="background-color:#60e4a2; margin-bottom: 0px; border-color:#60e4a2;">
+  <p style="color:white; background-color:#60e4a2; font-size:260%; padding-left: 1%;"><strong>THE SOUTH DAKOTA GUARDIANSHIP</strong></p>
+</nav>
+</head>
 
+<body>
+<br />
+<br />
+
+<button onClick="window.print()">Print this page</button>
+ <?
+  echo "\t";
+ ?>
+<br />
 <div class="jumbotron">
 <div class="container-fluid">
-      <h2>MY PASS</h2>
-      <p>This is your pass!!</p>                                                                                      
+      <h2 class="text-danger">MY PASS</h2>                                                                                     
       <div class="table-responsive">          
       <table class="table">
         <thead>
@@ -67,18 +76,17 @@ $userid = $_SESSION['userid'];
     </div>
 </div>
 <div>
-	<button onClick="window.print()">Print this page</button>
-	<?
-	echo "\t";
-	?>
-	<a href="main.php">Home</a>
+<button type="submit" class="btn-lg btn-block btn-success"><a href="coursesplayed.php"><h2><div class="glyphicon glyphicon-thumbs-up" style="color: white;"> Confirm </div></h2></a></div></button>
 </div>
-<div>
-	<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-	     	 <input name="submit" type="submit" class="btn-lg"> IM SURE </input> 
-	</form>
-</div>
+<br />
+<br />
+<br />
 
+<div style="margin-bottom: 0px; margin-top: 0px; text-align: center; padding: 0px;">
+<?php
+ Echo "<h4><a href=http://www.sdguardians.com/>Copyright 2011.The Guardianship Program, Inc. All Rights Reserved.</a></h4>"
+?>
+</div>
 </body>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
