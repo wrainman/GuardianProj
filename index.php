@@ -142,7 +142,7 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 <a name="reg"><a>
 	
 <div class="jumbotron" style="background-color: #ebeff0; color: #2491EA; box-shadow: 0 80px 100px #e5e5e5;">
-<h2 class="center" style="margin-bottom: 0px; background-color: #ebeff0; font-size: 225%;"><div class="text-success"><div class="glyphicon glyphicon-tree-deciduous"></div>&nbsp Register</h2></div>
+<h2 class="center" style="margin-bottom: 0px; background-color: #ebeff0; font-size: 225%; text-decoration:none;"><div class="text-success"><div class="glyphicon glyphicon-tree-deciduous"></div>&nbsp Register</h2></div>
 <div class="container-fluid" style="background-color: #ebeff0;">
 	
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" class="bge" style="background-color: #ebeff0;">
@@ -235,8 +235,7 @@ $(document).ready(function(){
 	<p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

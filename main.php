@@ -25,13 +25,15 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 <div>
 <img src="sdgMainm.gif" class="pic"/>
 	<div class="signOutbtn">
-		<a href="include/processes.php?log_out=true" class="btn btn-xlarge btn-primary" style="padding: 15px 30px; font-size: 85%;">Log out</a>
+		<a href="include/processes.php?log_out=true" class="btn btn-xlarge btn-primary" style="padding: 10px 20px; font-size: 95%;"><div class="glyphicon glyphicon-log-out"></div>&nbsp Log out</a>
 	</div>
 </div>
 
 <div class="page-header">
 <div class="welcome" style="font-family: oswald; width: 100%; text-align: center; font-size: 230%;">Welcome <? echo $_SESSION['first_name']; ?></div>
+<br />
 <div class="red"><?php echo $_GET['alert']; ?></div>
+
 <nav role="navigation">
  <ul class="nav nav-pills nav-justified nav-stacked">
   <li class="large" role="presentation"><a href="courseinfo.php">Course Information</a></li>
@@ -52,11 +54,12 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 ?>
   </div>
 </div>
+<br />	
 
 <div class="container-fluid">
 <!-- #BeginEditable "body1" -->
 				
-<h3>Golf Cards</h3>
+<h2>Golf Cards</h2>
 
 	<p>Golf for Guardianship is offering you a chance to play golf at each of 
 	the 87 participating golf courses.&nbsp; You can purchase a Golf card for 
@@ -64,19 +67,17 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 	yours today and help support a meaningful service for people with 
 	disabilities.&nbsp; </p>
 	<p>&nbsp;</p>
-	<p>&nbsp;</p>
 
 <h4>Select your card</h4>
 <div class="well" style="text-align: center;">
 <?php
 
 if ($_SESSION['user_level'] >= 4) {
-
 echo '<p class="text-success" style="font-size: 250%;"> Donate </p>';
 echo '<td>';
 echo '</form>';
 echo '<td class="product" />';
-echo '<img src="gb.jpg" width="154" height="151" alt="gold card" />';
+echo '<img src="cg1.jpg" width="154" height="151" alt="gold card" />';
 echo '<br />';
 echo '<br />';
 echo '<p class="text-info"> Please help support a meaningful service that makes a difference for people with disabilities </p>';
@@ -105,13 +106,13 @@ echo '<table class="table">';
 echo '<tr>';
 echo '<td>';
 echo '</form>';
-echo '<td class="product" style="text-align:center;">Gold Pak<br />';
+echo '<td class="product" style="text-align:center;">One Pass<br />';
 echo '<strong>Price: $30.00</strong><br />';
 echo '<img src="gb.jpg" width="154" height="151" alt="gold card" />';
 echo '<p>Description: Golf Pass</p>';
 
 echo '<div class="paypalbtn">';
-echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="background-color: grey; width: 60%;">';
+echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="background-color: grey; width: 75%;">';
 echo '<input type="hidden" name="cmd" value="_xclick">';
 echo '<input type="hidden" name="business" value="sdguardians@gmail.com">';
 echo '<input type="hidden" name="lc" value="US">';
@@ -132,7 +133,7 @@ echo '</td>';
 echo '<td>';						
 echo '<td class="product" style="text-align:center; height: 319px;">Gold Pak<br />';
 echo '<strong>Price: $100.00</strong><br />';
-echo '<img src="gb.jpg" width="154" height="151" alt="gold card" />';
+echo '<img src="cg1.jpg" width="154" height="151" alt="gold card" />';
 echo '<p>Description: Golf Pass</p>';
 
 echo '<div class="paypalbtn">';
@@ -153,16 +154,13 @@ echo '</form>';
 echo '</div>';
 echo '</td>';
 echo '</td>';
-
 echo '</tr>';
 echo '</table>';
 echo '</div>';
 	}
 ?>
-
 </div> <!-- well end -->
 </div> <!-- container end -->
-
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -170,18 +168,15 @@ echo '</div>';
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h2 class="modal-title" id="myModalLabel"><div class="text-warning"><strong> Golf for Guardianship User Pass <strong></h2>
+        <h2 class="modal-title" id="myModalLabel"><div class="text-primary"><div class="glyphicon glyphicon-tags"></div>&nbsp Golf for Guardianship User Pass </h2>
       </div>
       <div class="modal-body">
 		<div class="container-fluid">
-	   	<p>
-  			   		
+	   	<p> 			   		
 	   	<form method="post" action="passconfirmation.php" onsubmit="courseSelection()" >
-	   		
 	   	 <div class="jumbotron" style="font-size: 100%; margin-bottom: 0%;">
-	  
-	  	 <h2 class="text-primary" style="margin-top: 0%;"><div class="glyphicon glyphicon-globe"></div>&nbsp My Pass</h2>	
-	  	
+	  	 <h2 class="text-primary" style="margin-top: 0%;"><div class="glyphicon glyphicon-globe"></div>&nbsp My Pass</h2>
+
 	 <div class="table-responsive">	
 	   	<table class="table table-condensed"> 	
 	   	<tr>
@@ -215,8 +210,9 @@ echo '</div>';
 		}
 		 ?>
 		 </select> 
-		 
 		 <br>
+		 <br>
+		 <div class="bg-danger"><div class="bg-warning"><div class="glyphicon glyphicon-asterisk"></div> NOTE: Do not proceed until ready to present for approval </div></div>
 		 <br>
      	 <button type="submit" class="btn-lg btn-block btn-success"><div class="glyphicon glyphicon-ok-circle"></div>&nbsp Play golf! </button> 
      	 </form> 
@@ -240,7 +236,7 @@ echo '</div>';
       	
       	</p>
       <div class="modal-footer" style="margin-bottom: 0%;">
-        <button type="button" class="btn btn-default btn-info" data-dismiss="modal">Close</button>
+        <button type="button" style="padding: 10px 20px; font-size: 95%;" class="btn btn-default btn-info" data-dismiss="modal">Close</button>
       </div>
       </div>
     </div>
