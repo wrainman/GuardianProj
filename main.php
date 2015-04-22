@@ -1,4 +1,4 @@
-<?
+<?php
 include_once 'include/processes.php';
 $Login_Process = new Login_Process;
 $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
@@ -30,7 +30,7 @@ $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
 </div>
 
 <div class="page-header">
-<div class="welcome" style="font-family: oswald; width: 100%; text-align: center; font-size: 230%;">Welcome <? echo $_SESSION['first_name']; ?></div>
+<div class="welcome" style="font-family: oswald; width: 100%; text-align: center; font-size: 230%;">Welcome <?php echo $_SESSION['first_name']; ?></div>
 <br />
 <div class="red"><?php echo $_GET['alert']; ?></div>
 
@@ -180,16 +180,16 @@ echo '</div>';
 	 <div class="table-responsive">	
 	   	<table class="table table-condensed"> 	
 	   	<tr>
-	   	 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['birthdate']; ?></div></td>
-		 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['zipcode']; ?></div></td>
+	   	 <td><div class="field" style="font-size:100%;"><?php echo $_SESSION['birthdate']; ?></div></td>
+		 <td><div class="field" style="font-size:100%;"><?php echo $_SESSION['zipcode']; ?></div></td>
 		</tr>
 		<tr>
- 		 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['first_name']; ?></div></td> 
- 		 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['last_name']; ?></div></td>
+ 		 <td><div class="field" style="font-size:100%;"><?php echo $_SESSION['first_name']; ?></div></td> 
+ 		 <td><div class="field" style="font-size:100%;"><?php echo $_SESSION['last_name']; ?></div></td>
      	</tr>
         <tr>	
-     	 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['email_address']; ?></div></td>
-     	 <td><div class="field" style="font-size:100%;"><? echo $_SESSION['city']; ?></div></td>
+     	 <td><div class="field" style="font-size:100%;"><?php echo $_SESSION['email_address']; ?></div></td>
+     	 <td><div class="field" style="font-size:100%;"><?php echo $_SESSION['city']; ?></div></td>
      	</tr>
      	</table>
      </div>

@@ -82,7 +82,7 @@ $Login = $Login_Process -> log_in($_POST['user'], $_POST['pass'], $_POST['rememb
 <input name="remember" type="checkbox" value="true" />
 </div>
 
-<input name="page" type="hidden" value="<? echo $_GET['page']; ?>" />
+<input name="page" type="hidden" value="<?php echo $_GET['page']; ?>" />
 <div class="text-center">
 <input name="submit" type="submit" class="btn-lg" value="Log In" />
 </div>
@@ -103,7 +103,7 @@ $Login = $Login_Process -> log_in($_POST['user'], $_POST['pass'], $_POST['rememb
 
 
 <!--REGISTER PORTION -->
-<?
+<?php
 include_once 'include/processes.php';
 $Login_Process = new Login_Process;
 $New = $Login_Process -> Register($_POST, $_POST['process']);
@@ -155,53 +155,53 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 <br />
 <div align="center">
 	<label>First Name</label>	
-	<input name="first_name" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['first_name']; ?>" />
+	<input name="first_name" type="text" class="form-control input-lg" style="width: 70%;" value="<?php echo $_POST['first_name']; ?>" />
 
 <br />
 <div align="center">
 	<label>Last Name</label>
-	<input name="last_name" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['last_name']; ?>" />
+	<input name="last_name" type="text" class="form-control input-lg" style="width: 70%;" value="<?php echo $_POST['last_name']; ?>" />
 </div>
 <br />
 <div align="center">      
   	<label>Email Address</label>
-	<input name="email_address" type="email" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['email_address']; ?>"/>
+	<input name="email_address" type="email" class="form-control input-lg" style="width: 70%;" value="<?php echo $_POST['email_address']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label>Birthdate</label>
     <br />
-	<input name="birthdate" type="date" class="form-control input-lg" style="width: 70%; font-size: 130%;" value="<? echo $_POST['birthdate']; ?>"/>
+	<input name="birthdate" type="date" class="form-control input-lg" style="width: 70%; font-size: 130%;" value="<?php echo $_POST['birthdate']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label>City</label>
-	<input name="city" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['city']; ?>"/>
+	<input name="city" type="text" class="form-control input-lg" style="width: 70%;" value="<?php echo $_POST['city']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label>Zip Code</label>
-	<input name="zipcode" type="number" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['zipcode']; ?>"/>
+	<input name="zipcode" type="number" class="form-control input-lg" style="width: 70%;" value="<?php echo $_POST['zipcode']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label>Username</label>
-	<input name="username" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['username']; ?>"/>
+	<input name="username" type="text" class="form-control input-lg" style="width: 70%;" value="<?php echo $_POST['username']; ?>"/>
 </div>
 <br />
 <div align="center">
 	<label>Password</label>
-	<input name="pass1" type="password" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['pass1']; ?>"/>
+	<input name="pass1" type="password" class="form-control input-lg" style="width: 70%;" value="<?php echo $_POST['pass1']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label>Confirm password</label>
-	<input name="pass2" type="password" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['pass2']; ?>"/>
+	<input name="pass2" type="password" class="form-control input-lg" style="width: 70%;" value="<?php echo $_POST['pass2']; ?>"/>
 </div>
 <br />
 <div align="center">
     <label a href="#" data-toggle="tooltip" title="Enter your code here if possessed">Passcode</label><div class="glyphicon glyphicon-question-sign"></div>
-	<input name="code" type="text" class="form-control input-lg" style="width: 70%;" value="<? echo $_POST['code']; ?>"/>
+	<input name="code" type="text" class="form-control input-lg" style="width: 70%;" value="<?php echo $_POST['code']; ?>"/>
 
 <script>
 $(document).ready(function(){

@@ -1,4 +1,4 @@
-<?
+<?php
 include_once 'include/processes.php';
 $Login_Process = new Login_Process;
 $Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
@@ -35,7 +35,7 @@ $userid = $_SESSION['userid'];
 <br />
 
 <button onClick="window.print()">Print this page</button>
- <?
+ <?php
   echo "\t";
  ?>
 <br />
@@ -46,29 +46,29 @@ $userid = $_SESSION['userid'];
       <table class="table">
         <thead>
           <tr>
-            <th><h3><? echo $_SESSION['username']; ?></h3></th>
+            <th><h3><?php echo $_SESSION['first_name']; ?></h3> <h3><?php echo $_SESSION['last_name']; ?></h3></th>
           </tr>
         </thead>
         <tbody>
           <tr>
           	<td><h3>Email Address: </h3></td>
-            <td><h3><? echo $_SESSION['email_address']; ?></h3></td>
+            <td><h3><?php echo $_SESSION['birthdate']; ?></h3></td>
           </tr>
           <tr>
           	<td><h3>First Name: </h3></td>
-            <td><h3><? echo $_SESSION['first_name']; ?></h3></td>
+            <td><h3><?php echo $_SESSION['city']; ?></h3></td>
           </tr>
           <tr>
           	<td><h3>Last Name: </h3></td>
-            <td><h3><? echo $_SESSION['last_name']; ?></h3></td>
+            <td><h3><?php echo $_SESSION['zipcode']; ?></h3></td>
           </tr>
           <tr>
           	<td><h3>Codes Entered*mabey*: </h3></td>
-            <td><h3><? echo $_SESSION['code']; ?></h3></td>
+            <td><h3><?php echo $_SESSION['email_address']; ?></h3></td>
           </tr>     
           <tr>
           	<td><h3>Course: </h3></td>
-            <td><h3><? echo $courseSel; ?></h3></td>
+            <td><h3><?php echo $courseSel; ?></h3></td>
           </tr>   
         </tbody>
       </table>

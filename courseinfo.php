@@ -1,4 +1,4 @@
-<?
+<?php
 include_once 'include/processes.php';
 $Login_Process = new Login_Process;
 $Login_Process->check_status($_SERVER['SCRIPT_NAME']);

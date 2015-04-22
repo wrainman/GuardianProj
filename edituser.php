@@ -1,4 +1,4 @@
-<?
+<?php
 include_once 'include/processes.php';
 $Login_Process = new Login_Process;
 $Login_Process->check_status($_SERVER['SCRIPT_NAME']);
@@ -129,23 +129,23 @@ $Edit = $Login_Process->edit_details($_POST, $_POST['process']);
 
 
 <div class="label" style="text-align: left; color: black;">First Name: </div>
-<input name="first_name" type="text" class="form-control input-lg" value="<? echo $_SESSION['first_name']; ?>" />
+<input name="first_name" type="text" class="form-control input-lg" value="<?php echo $_SESSION['first_name']; ?>" />
 <br />
 <br />
 
 <div class="label" style="text-align: left; color: black;">Last Name: </div>
-<input name="last_name" type="text" class="form-control input-lg" value="<? echo $_SESSION['last_name']; ?>" />
+<input name="last_name" type="text" class="form-control input-lg" value="<?php echo $_SESSION['last_name']; ?>" />
 <br />
 <br />
 
 <div class="label" style="text-align: left; color: black;">Email Address: </div>
-<input name="email_address" type="text" class="form-control input-lg" value="<? echo $_SESSION['email_address']; ?>"  />
+<input name="email_address" type="text" class="form-control input-lg" value="<?php echo $_SESSION['email_address']; ?>"  />
  
 
 
 <br />
 <div class="right">
-<input name="username" type="hidden" id="username" value="<? echo $_SESSION['username']; ?>" />
+<input name="username" type="hidden" id="username" value="<?php echo $_SESSION['username']; ?>" />
 <input name="process" type="submit" class="textfield" value="Save Changes" id="process" style="padding: 3%;"/>
 </div>
 </div> <!-- end container -->
