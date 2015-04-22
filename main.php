@@ -82,7 +82,7 @@ echo '<br />';
 echo '<br />';
 echo '<p class="text-info"> Please help support a meaningful service that makes a difference for people with disabilities </p>';
 echo '<div class="paypalbtn">';
-echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="background-color: grey; width: 75%;">';
+echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="background-color: transparent; width: 75%;">';
 echo '<input type="hidden" name="cmd" value="_donations">';
 echo '<input type="hidden" name="business" value="sdguardians@gmail.com">';
 echo '<input type="hidden" name="lc" value="US">';
@@ -112,7 +112,7 @@ echo '<img src="gb.jpg" width="154" height="151" alt="gold card" />';
 echo '<p>Description: Golf Pass</p>';
 
 echo '<div class="paypalbtn">';
-echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="background-color: grey; width: 75%;">';
+echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="background-color: transparent; width: 75%;">';
 echo '<input type="hidden" name="cmd" value="_xclick">';
 echo '<input type="hidden" name="business" value="sdguardians@gmail.com">';
 echo '<input type="hidden" name="lc" value="US">';
@@ -137,7 +137,7 @@ echo '<img src="cg1.jpg" width="154" height="151" alt="gold card" />';
 echo '<p>Description: Golf Pass</p>';
 
 echo '<div class="paypalbtn">';
-echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="background-color: grey; width: 75%;">';
+echo '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" style="background-color: transparent; width: 75%;">';
 echo '<input type="hidden" name="cmd" value="_xclick">';
 echo '<input type="hidden" name="business" value="sdguardians@gmail.com">';
 echo '<input type="hidden" name="lc" value="US">';
