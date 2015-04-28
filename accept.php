@@ -24,11 +24,14 @@ foreach ($raw_post_array as $keyval) {
 }
 // read the post from PayPal system and add 'cmd'
 $req = 'cmd=_notify-validate';
+$get_magic_quotes_exists = false;
+
 if(function_exists('get_magic_quotes_gpc')) {
-	$get_magic_quotes_exists = true;
+	$get_magic_quotes_exists = (get_magic_quotes_gpc() == 1 ? true : false);
 }
+
 foreach ($myPost as $key => $value) {
-	if($get_magic_quotes_exists == true && get_magic_quotes_gpc() == 1) {
+	if($get_magic_quotes_exists == true) {
 		$value = urlencode(stripslashes($value));
 	} else {
 		$value = urlencode($value);
@@ -95,14 +98,14 @@ if (strcmp ($res, "VERIFIED") == 0) {
 	// check that payment_amount/payment_currency are correct
 	// process payment and mark item as paid.
 	// assign posted variables to local variables
-	//$item_name = $_POST['item_name'];
-	//$item_number = $_POST['item_number'];
-	//$payment_status = $_POST['payment_status'];
-	//$payment_amount = $_POST['mc_gross'];
-	//$payment_currency = $_POST['mc_currency'];
-	//$txn_id = $_POST['txn_id'];
-	//$receiver_email = $_POST['receiver_email'];
-	//$payer_email = $_POST['payer_email'];
+	$item_name = $_POST['item_name'];
+	$item_number = $_POST['item_number'];
+	$payment_status = $_POST['payment_status'];
+	$payment_amount = $_POST['mc_gross'];
+	$payment_currency = $_POST['mc_currency'];
+	$txn_id = $_POST['txn_id'];
+	$receiver_email = $_POST['receiver_email'];
+	$payer_email = $_POST['payer_email'];
 	
 	if(DEBUG == true) {
 		error_log(date('[Y-m-d H:i e] '). "Verified IPN: $req ". PHP_EOL, 3, LOG_FILE);
@@ -124,7 +127,7 @@ if (strcmp ($res, "VERIFIED") == 0) {
 <head>
 <script type="text/javascript">
 
-   window.location="http://www.loganwray.ae/APP/main.php";
+   window.location="http://45.56.72.208/GuardianProj/main.php";
 
 </script>
 </head>
