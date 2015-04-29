@@ -1,19 +1,4 @@
-
 <?php
-include_once 'include/processes.php';
-$Login_Process = new Login_Process;
-$Login_Process -> check_status($_SERVER['SCRIPT_NAME']);
-
-try {
-			$options = array(PDO::ATTR_PERSISTENT => true);
-			$db = new PDO('mysql:host=localhost;dbname=SDG APP', 'root', '7141521L!w', $options);
-		} catch(PDOException $ex) {
-			die("Failed to connect to the database: " . $ex -> getMessage());
-		}
-		$db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$db -> setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC, false);
-		header('Content-Type: text/html; charset=utf-8');
-
 
 
 // CONFIG: Enable debug mode. This means we'll log requests into 'ipn.log' in the same directory.
@@ -36,11 +21,14 @@ foreach ($raw_post_array as $keyval) {
 }
 // read the post from PayPal system and add 'cmd'
 $req = 'cmd=_notify-validate';
+$get_magic_quotes_exists = false;
+
 if(function_exists('get_magic_quotes_gpc')) {
-	$get_magic_quotes_exists = true;
+	$get_magic_quotes_exists = (get_magic_quotes_gpc() == 1 ? true : false);
 }
+
 foreach ($myPost as $key => $value) {
-	if($get_magic_quotes_exists == true && get_magic_quotes_gpc() == 1) {
+	if($get_magic_quotes_exists == true) {
 		$value = urlencode(stripslashes($value));
 	} else {
 		$value = urlencode($value);
@@ -107,6 +95,7 @@ if (strcmp ($res, "VERIFIED") == 0) {
 	// check that payment_amount/payment_currency are correct
 	// process payment and mark item as paid.
 	// assign posted variables to local variables
+	
 	$item_name = $_POST['item_name'];
 	$item_number = $_POST['item_number'];
 	$payment_status = $_POST['payment_status'];
@@ -116,49 +105,21 @@ if (strcmp ($res, "VERIFIED") == 0) {
 	$receiver_email = $_POST['receiver_email'];
 	$payer_email = $_POST['payer_email'];
 	
-	 $sql = "INSERT INTO `codes`(`codes`) VALUES (?)";
-                $query1 = $db -> prepare($sql);
-                $query1 -> bindParam(1, $first_name);
-                $query1 -> execute();
-
-
-
 	if(DEBUG == true) {
 		error_log(date('[Y-m-d H:i e] '). "Verified IPN: $req ". PHP_EOL, 3, LOG_FILE);
-	 }
 	}
-	 else if (strcmp ($res, "INVALID") == 0) {
+} else if (strcmp ($res, "INVALID") == 0) {
 	// log for manual investigation
 	// Add business logic here which deals with invalid IPN messages
 	if(DEBUG == true) {
 		error_log(date('[Y-m-d H:i e] '). "Invalid IPN: $req" . PHP_EOL, 3, LOG_FILE);
 	}
 }
+
+if(get_magic_quotes_gpc())
+	echo "Magic quotes are enabled";
+else
+	echo "Magic quotes are disabled";
+
+//echo "Hello world!";
 ?>
-
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Accept</title>
-
-<link href="include/style.css" rel="stylesheet" type="text/css">
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<body>
-<script>
-
-   window.locwindow.location.href="http://logan.m9development.com/GuardianProj/main.php";
-   window.locaton.reload(true);
-
-</script>
-
-<h1><?php echo $firstname; ?><h1>
-</body>
-</html>
-

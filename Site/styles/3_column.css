@@ -1,0 +1,10 @@
+﻿#column1_wrapper	{width:100%; 		border:0px;}
+#left1col			{width:220px;		float:left;  		padding:0px 0px 0px 20px;}
+#left1pad			{width:0px;			float:left;}
+#right1col			{width:220px;		float:right;		padding:0px 20px 0px 0px; /*margin:4px 30px 0px 15px;*/}
+#right1pad			{width:0px;			float:right; }
+#center1col			{margin-left:250px; margin-right:250px; padding:0px 0px 0px 0px;}
+
+#infoleft			{width:325px ;		float:left;  	margin:0px 0px 0px 0px; 	padding:0px 0px 0px 0px;	vertical-align:top; }
+#inforight			{width:325px ;		float:right;	margin:0px 0px 0px 0px; 	padding:0px 0px 0px 0px;	vertical-align:top; }
+#infocenter			{									margin:0px 310px 0px 310px; padding:0px 0px 0px 0px;	vertical-align:top; }

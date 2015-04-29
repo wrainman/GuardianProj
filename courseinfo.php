@@ -126,12 +126,6 @@ $Login_Process->check_status($_SERVER['SCRIPT_NAME']);
 <div class="table-responsive">
 <table id="myTable" class="table table-striped table-condensed">
     <thead>
-    <div class="col-md-4 text-center"> 
-  <span style="font-size: 110%;" class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-  <span style="font-size: 110%;" class="glyphicon glyphicon-arrow-right" aria-hidden="true">&nbspScroll over&nbsp</span>
-  <span style="font-size: 110%;" class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-  <span style="font-size: 110%;" class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
-</div>
       <tr>
 	<th>Course </th>
 	<th> Info </th>

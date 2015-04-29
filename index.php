@@ -63,8 +63,8 @@ $Login = $Login_Process -> log_in($_POST['user'], $_POST['pass'], $_POST['rememb
 <div class="container-fluid">
 <div align="center">
 <font id="h1">Log into your account</font>
-</br> <h3>OR<h3>
-<h2>Sign Up Below!</h2>
+</br> <h2>OR<h2>
+<h2>Sign Up Below</h2>
 
 <div class="red">
 <?php echo $Login; ?></div>
@@ -115,6 +115,15 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style type="text/css">
+	
+	input[type=number] {
+	-moz-appearance: textfield;
+	}
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+  	-webkit-appearance: none; 
+	 margin: 0; 
+	}
 	.container-fluid {
 		margin-left: 0;
 		width: 100%;
@@ -169,9 +178,8 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 </div>
 <br />
 <div align="center">
-    <label>Birthdate</label>
-    <br />
-	<input name="birthdate" type="date" class="form-control input-lg" style="width: 70%; font-size: 130%;" value="<?php echo $_POST['birthdate']; ?>"/>
+    <label>Birthdate</label> <br /> <label style ="font-size: 75%;">YYYY-MM-DD</label>
+	<input name="birthdate" type="date" class="form-control input-lg" text=" " style="width: 70%; font-size: 130%;" value="<?php echo $_POST['birthdate']; ?>"/>
 </div>
 <br />
 <div align="center">
@@ -181,7 +189,7 @@ $New = $Login_Process -> Register($_POST, $_POST['process']);
 <br />
 <div align="center">
     <label>Zip Code</label>
-	<input name="zipcode" type="number" class="form-control input-lg" style="width: 70%;" value="<?php echo $_POST['zipcode']; ?>"/>
+	<input name="zipcode" type="number" class="form-control input-lg" style="width: 70%; " value="<?php echo $_POST['zipcode']; ?>"/>
 </div>
 <br />
 <div align="center">
@@ -217,7 +225,7 @@ $(document).ready(function(){
 <input name="process" style="font-size: 100%;" class="btn btn-large btn-info" type="submit" id="process" value="Add User" />
 
 <!-- Button trigger modal -->
-<button type="button" style="font-size: 100%;" class="btn btn-large" data-toggle="modal" data-target="#myModal">
+<button type="button" style="font-size: 100%;" class="btn btn-warning btn-large" data-toggle="modal" data-target="#myModal">
   Terms
 </button>
 
